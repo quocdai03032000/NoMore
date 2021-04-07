@@ -1,8 +1,0 @@
-﻿@model WebNangCao___ThucHanh.Models.Category
-
-@{
-    @Html.DropDownListFor(model =>model.IDCate, new SelectList(Model.Listcate.OrderBy(model=>model.NameCate),"IdCate","NameCate"),"--Select Cate--")
-}
-
-
-

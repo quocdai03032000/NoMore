@@ -1,0 +1,285 @@
+html{
+    font-size: 62.5%;
+    font-family: "Abeezee",sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: #f0f2f5;
+}
+
+
+/*===========================TRANG CHÍNH CỦA ADMIN ========*/
+/*=========================== Header ======================*/
+
+
+
+
+/*================== ĐỊNH DẠNG THANH MENU ===================*/
+
+
+/* Định dạng thanh điều hướng trên cùng */
+
+.menu {
+    width: 100%;        
+    background-color: #394551;    
+    height: 50px;
+}
+.body-menu{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.body-menu >li{
+    float: left;
+    list-style: none;   
+    position: relative ;
+}
+.body-menu>li>a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 17px 0px 17px;
+    line-height: 50px;
+    display: block;       
+    font-size: 20px;   
+    font-weight:500;
+}
+
+
+/* Thay đổi màu liên kết khi di chuột qua */
+.menu li a:hover {
+    background-color:#FFD700;
+    color: black;
+    font-weight: bold
+}
+.submenu{
+    width: 250px;
+    background-color: #394551;
+    min-height: 140px;
+    display: none; 
+    position: absolute;
+    font-size: 20px;   
+    font-weight:500;
+}
+.submenu li{
+    list-style: none;
+}
+.submenu li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-top: 1px solid rgba(228, 228, 228, 0.678);
+    line-height: 50px;
+    display: block;
+    text-indent: 15px;
+}
+.body-menu > li:hover .submenu{
+    display: block; 
+}
+.submenu > li > a:hover{
+    background-color:#FFD700;
+    color:rgb(0, 0, 0);
+   
+}
+
+/*=====================================================*/
+/*======================== CHỈNH LOGO ==================*/
+
+.logo{
+    float:left;    
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.logo>img{
+    width: 65px;
+    height: 40px;    
+   
+}
+
+/*=================== căn phải phần tử admin=================*/
+
+.nameAdmin{
+    position:absolute;
+    right: 50px;
+    line-height: 50px;
+    
+    
+    
+}
+.nameAdmin > a{
+    color:white ;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;   
+    font-weight:500;
+}
+.submenu_admin{
+    width: 250px;
+    background-color: #394551;
+    min-height: 100px;
+    display: none; 
+    position: absolute;
+    font-size: 20px;   
+    font-weight:500;
+    list-style: none;
+}
+.submenu_admin li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-top: 1px solid rgba(228, 228, 228, 0.678);
+    line-height: 50px;
+    display: block;
+    text-indent: 15px;
+}
+.nameAdmin a:hover
+{
+    background-color:#FFD700;
+    color: black;
+    font-weight: bold
+}
+.nameAdmin:hover .submenu_admin{
+    display: block; 
+    cursor: pointer;
+}
+.submenu_admin > li > a:hover{
+    background-color:FFD700;
+    color:rgb(0, 0, 0);
+   
+}
+/*===========================================================*/
+
+
+
+
+
+
+
+/* =========== TRANG LOGIN ========= */
+/*============================================*/
+/* 
+.login{
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 40px 40px 40px;
+    box-shadow: 0px 0px 20px rgb(173, 173, 173);
+} */
+
+/*========== LOGO + tên trường ==============*/
+/* .header-login{    
+    padding: 0px;
+    margin-bottom: 20px;
+ }
+ .header-login > img{
+     display: block;
+     width: 60%;   
+     margin: 0 auto;
+     margin-bottom: 10px;
+ }
+ .header-login > h4 
+ {   
+     text-align: center;
+     color: #324175;
+     font-weight: 600;
+     font-size: 16px;
+     padding: 0;
+     margin: 0; 
+ }
+ .header-login > h5{
+     text-align: center;
+     color: #324175 ;    
+     font-size: 14px;
+     padding: 0;
+     margin: 25px 0 0px;
+
+ } */
+ /* =========== Đường line kẻ ngang ============*/
+/* .line
+{
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 20px;
+    
+}
+.line > .line-or{
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #999;    
+}
+.line > .or{
+    
+    position: absolute;
+    top: 0;
+    -lh-property: 0;
+    left: -webkit-calc(50% - 25px);
+    left: -moz-calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    color: rgb(3, 3, 3);
+    margin: 0 auto;
+    
+} */
+
+/*========== phần thân Login =============*/
+
+/* .login-field{
+    display: flex;
+    align-items: center;
+    background-color: #e9effa;
+    padding: 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+.login-icon{
+    color: #344667;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.login-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+}
+.login-submit{
+    color: white;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #435ebe;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 14px;
+    outline: none;
+
+}
+.login-forgot-password{
+    text-decoration: none;
+    display: block;
+    text-align: right; 
+    margin-bottom: 20px;
+    color: #3f57ad;
+    font-weight: 600;
+    font-size: 11px;
+} */
+
+/*==============================================================================*/

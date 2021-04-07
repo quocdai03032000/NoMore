@@ -1,0 +1,66 @@
+﻿@model WebNangCao___ThucHanh.Models.AdminUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div class="form-register">
+        @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken();
+            <table>
+                <tr><th colspan="2">Register</th></tr>
+                <tr>
+                    <td>@Html.LabelFor(m=>m.ID)</td>
+                    <td>@Html.TextBoxFor(m=>m.ID)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m=>m.ID)</td>
+                </tr>
+
+               
+                <tr>
+                    <td>@Html.LabelFor(m => m.NameUser)</td>
+                    <td>@Html.TextBoxFor(m => m.NameUser)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m => m.NameUser)</td>
+                </tr>
+
+                
+                <tr>
+                    <td>@Html.LabelFor(m=>m.PasswordUser)</td>
+                    <td>@Html.TextBoxFor(m=>m.PasswordUser)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m=>m.PasswordUser)</td>
+                </tr>
+
+                <tr>
+                    <td>@Html.LabelFor(m => m.ConfirmPass)</td>
+                    <td>@Html.TextBoxFor(m => m.ConfirmPass)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m => m.ConfirmPass)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Create" />
+                        <input type="reset" value="Reset" />
+                    </td>
+                </tr>
+
+            </table>
+        }
+    </div>
+</body>
+</html>

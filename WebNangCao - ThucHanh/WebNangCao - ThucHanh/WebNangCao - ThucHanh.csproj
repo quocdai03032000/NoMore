@@ -150,47 +150,66 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AdminUser.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\Account_Admin.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\DangKyTheTV.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\DauSach.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSportStore.Context.cs">
+    <Compile Include="Models\DKyMuonSach.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyThuVienModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.Context.tt</DependentUpon>
+      <DependentUpon>QuanLyThuVienModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSportStore.cs">
+    <Compile Include="Models\QuanLyThuVienModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSportStore.Designer.cs">
+    <Compile Include="Models\QuanLyThuVienModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
+      <DependentUpon>QuanLyThuVienModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\Sach.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\OrderPro.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\Sach_Dang_Muon.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TheThuVien.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TinhTrangSach.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TinhTrang_TheTV.cs">
+      <DependentUpon>QuanLyThuVienModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Admin\img\bg.jpg" />
+    <Content Include="Assets\Admin\img\logoHuflit%40.png" />
+    <Content Include="Assets\Admin\img\logoHuflit.png" />
+    <Content Include="Assets\Admin\reset.css" />
+    <Content Include="Assets\Admin\style.css" />
+    <Content Include="Assets\Admin\styleLogin.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\1.jpg" />
@@ -203,28 +222,31 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\DBSportStore.Context.tt">
+    <Content Include="Models\QuanLyThuVienModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
-      <LastGenOutput>DBSportStore.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyThuVienModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVienModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBSportStore.tt">
+    <Content Include="Models\QuanLyThuVienModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
-      <LastGenOutput>DBSportStore.cs</LastGenOutput>
+      <DependentUpon>QuanLyThuVienModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVienModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\DBSportStore.edmx">
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <EntityDeploy Include="Models\QuanLyThuVienModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBSportStore.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLyThuVienModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DBSportStore.edmx.diagram">
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
+    <Content Include="Models\QuanLyThuVienModel.edmx.diagram">
+      <DependentUpon>QuanLyThuVienModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -251,12 +273,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Product\Create.cshtml" />
-    <Content Include="Views\Product\SelectCate.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Main\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
