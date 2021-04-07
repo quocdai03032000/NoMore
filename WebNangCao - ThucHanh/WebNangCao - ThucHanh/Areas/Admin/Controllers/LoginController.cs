@@ -29,14 +29,17 @@ namespace WebNangCao___ThucHanh.Areas.Admin.Controllers
             else
             {
                 Session["User"] = ad.User;
-                return RedirectToAction("Suss", "Login");
+                return RedirectToAction("Index", "Main");
             }
             
         }
 
-        public ActionResult Suss()
+        public ActionResult Logout()
         {
-            return View();
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
         }
+
+
     }
 }
