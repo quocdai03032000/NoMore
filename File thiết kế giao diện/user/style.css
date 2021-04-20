@@ -1,0 +1,215 @@
+/**********************************/
+/********** login CSS ***********/
+/**********************************/
+
+.login_begin{
+    height: 100vh;
+    background-color:rgba(255,255,255,.1) ;
+}
+.login{
+    width: 400px;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px 40px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205) ;
+}
+.header-login{    
+    padding: 0px;
+    margin-bottom: 20px;
+ }
+ .header-login > img{
+     display: block;
+     width: 60%;   
+     margin: 0 auto;
+     margin-bottom: 10px;
+ } 
+ .header-login > h5{
+     text-align: center;
+     color: #007bff ;    
+     font-size: 25px;
+     padding: 0;
+     margin: 25px 0 0px;
+     font-weight: 600;
+
+ }
+ /* =========== Đường line kẻ ngang ============*/
+.line
+{
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 20px;
+    
+}
+.line > .line-or{
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #999;    
+}
+
+    
+
+
+/*========== phần thân Login =============*/
+
+.login-field{
+    display: flex;
+    align-items: center;   
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+    
+}
+.login-icon{    
+    color: rgba(0, 0, 0, 0.705);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.login-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+}
+.login-submit{
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #25b37a;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 17px;
+    outline: none;
+
+}
+.login-input-pass{
+    margin-bottom: 0px;
+}
+.login-submit:hover{
+    background-color:#229b6a ;
+}
+.login-register{
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.705);
+    font-weight: 600;
+    font-size: 13px;    
+    margin: 10px 15px 10px 0px;
+    margin-left: 10px;
+}
+.login-forgot-password{
+    text-decoration: none;
+    display: inline-block;
+    text-align: right; 
+    color: rgba(0, 0, 0, 0.705);
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 110px;
+}
+
+
+
+/**********************************/
+/********** Contact CSS ***********/
+/**********************************/
+.contact {
+    position: relative;
+    padding-top: 30px;
+}
+
+.contact .contact-info,
+.contact .contact-form,
+.contact .contact-map {
+    height: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-bottom: 30px solid #f3f6ff;
+}
+
+.contact .contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact .contact-info h3 i {
+    width: 20px;
+    color: #FFD700;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #FFD700;
+}
+
+.contact .social a:hover {
+    background: #FFD700;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+    
+}
+
+.contact-form > form > .row{
+    margin-bottom: 10px;  
+}
+.form-control{
+    font-size: 15px;
+    font-family: "Abeezee",sans-serif;
+    outline: none;
+}
+.btn{
+    border: 2px solid #e6c300;
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    color: #e6c300;
+    font-weight: 600;
+    outline: none;
+}
+.btn:hover,
+.btn:active{
+    background-color: #FFD700;
+    color: white;
+}
+.contact .contact-map iframe {
+    width: 100%;
+    height: 450px;
+}
+/**********************************/
+/**********************************/
+/**********************************/
