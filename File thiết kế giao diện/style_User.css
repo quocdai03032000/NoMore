@@ -1,0 +1,129 @@
+html{
+    font-size: 62.5%;
+    font-family: "Abeezee",sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: #f0f2f5;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
+
+
+/**********************************/
+/********* Bottom Bar CSS *********/
+/**********************************/
+
+
+.bottom-bar {
+    padding: 10px 0;
+    background: #394551;
+     
+}
+
+.bottom-bar .logo {    
+    text-align: center;
+    overflow: hidden;
+}
+.bottom-bar .logo a{
+    text-decoration: none;
+    color: #FFD700;
+    font-family: "Abeezee",sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 10px;
+
+}
+.bottom-bar .logo a img {
+    max-height: 50px;
+}
+
+.bottom-bar .search {
+    width: 100%;
+}
+
+.bottom-bar .search input[type=text] {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    color: #000000;
+    font-weight: 600;
+    border: 1.5px solid #464a4e;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+.bottom-bar .search button {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: 1px;
+    right: 16px;
+    padding: 0 15px;
+    border: none;
+    background: none;
+    color: #464a4e;
+    border-radius: 0 2px 2px 0;
+    background-color:#FFD700;
+    outline: none;
+}
+
+.bottom-bar .search button:hover {
+    background: #dfbd00;
+    color: black;
+    border-radius: 0 2px 2px 0;
+}
+
+
+
+/*************************************************/
+/*********** CSS phần login + mượn ***************/
+
+.nameAdmin{
+    display: inline-block;
+    
+    
+    
+}
+.nameAdmin > a{
+    color:#FFD700 ;
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;   
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+    
+}
+
+.cart{
+    display: inline-block;
+    margin-left: 40px;
+   
+
+}
+.cart > a{
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 20px;
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+
+}
+.cart > a:hover{
+    color:  white;
+}
+.nameAdmin > a:hover{
+    color: white;
+}
+/*************************************************/
+/*************************************************/
+/*************************************************/
