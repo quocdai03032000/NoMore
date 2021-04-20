@@ -118,6 +118,40 @@ body{
     color: white;
 }
 
+.submenu_admin{
+    width: 250px;
+    background-color: #394551;
+    min-height: 100px;
+    display: none; 
+    position:absolute;
+    font-size: 20px;   
+    font-weight:500;
+    list-style: none;
+    padding: 15px;
+    
+}
+.submenu_admin li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 50px;
+    display:flex;
+    text-indent: 15px;
+    
+}
+
+
+.nameAdmin:hover .submenu_admin{
+    display: block; 
+    cursor: pointer;
+    z-index: 50;
+    
+}
+.submenu_admin > li > a:hover{
+    
+    color:#FFD700;
+   
+}
+
 .Header_contact{
     display: inline-block;
 }
