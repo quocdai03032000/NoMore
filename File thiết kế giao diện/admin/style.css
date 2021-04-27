@@ -287,22 +287,28 @@ body{
         padding-left: 60px;
     }
 }
-.wishlist-page {
+/* .wishlist-page {
     position: relative;
     padding: 30px 0;
-}
+} */
 
-.wishlist-page .wishlist-page-inner {
+/* .wishlist-page .wishlist-page-inner {
     padding: 30px;
     background: #ffffff;
-}
+} */
 
 .wishlist-page .table {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+    padding: 0px;
+    border-collapse: collapse;
 }
 
+.wishlist-page .table .thead-dark tr{
+    background-color: rgba(0, 0, 0, 0.342);
+
+}
 .wishlist-page .table .thead-dark th {
     font-family: 'Source Code Pro', monospace;
     font-size: 18px;
@@ -313,6 +319,7 @@ body{
     border-color: #dddddd;
     border-bottom: none;
     vertical-align: middle;
+  
 }
 
 .wishlist-page .table td {
@@ -375,6 +382,61 @@ body{
     background: #000000;
     border: none;
 }
+
+/*============================================*/
+/*============================================*/
+/*============================================*/
+
+
+
+.list_sach_table{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    border-radius: 1.5px;
+    margin-top: 25px;
+}
+.table_sach{
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+.table_sach > thead{
+    background-color: #6a6a97;    
+}
+
+.table_sach > thead > tr >td
+{
+    font-size: 13px;
+    font-weight: bold;
+} 
+.table_sach  td{
+    padding: 10px;
+}
+
+tbody > tr{
+    border-top: 0.5px solid rgba(105, 105, 105, 0.329);
+}
+
+.icon_status{
+    
+    font-size: 5px;
+    color: red;
+}
+.table_sach_status{
+    color: red; 
+}
+
+
+
+
+
+
+
 
 
 
