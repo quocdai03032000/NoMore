@@ -1,0 +1,81 @@
+﻿@model DoAn1_QuanLyThuVien.Models.DauSach
+
+@{
+    ViewBag.Title = "ThemDauSach";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Thêm đầu sách</h3>
+            </div>
+            <div class="col-md-4">                
+                <a class="DauSach-btn-add" href="@Url.Action("DauSach","Main")"> <i class="fas fa-chevron-left"></i> Quay lại</a>
+            </div>
+        </div>
+    </div>
+    <div class="login_register">
+        <form action="javascrip:void(0);" class="changePass">
+
+            <div class="mess-suss-ThemDauSach">Thêm thành công !!!</div> <!-- bỏ viewbag vào đây -->
+            <div class="ThemDauSach-field">
+                <i class="fas fa-barcode"></i>
+                <input type="text" class="ThemDauSach-input" placeholder="Nhập mã sách" required>
+            </div>
+            <div class="ThemDauSach-field ">
+                <i class="fas fa-book"></i>
+                <input type="text" class="ThemDauSach-input " placeholder="Nhập tên sách" required>
+            </div>
+            <div class="ThemDauSach-field ">
+                <i class="fas fa-user-edit"></i>
+                <input type="text" class="ThemDauSach-input " placeholder="Nhập tác giả" required>
+            </div>
+            <div class="ThemDauSach-field ">
+                <i class="fas fa-caret-down"></i>
+                <input type="text" class="ThemDauSach-input " placeholder="Nhập thể loại" required>
+            </div>
+            <div class="ThemDauSach-field ">
+                <i class="fas fa-hand-point-right"></i>
+                <input type="text" class="ThemDauSach-input " placeholder="Nhập năm xuất bản" required pattern="[0-9]{1,4}" title="Vui lòng nhập số!">
+            </div>
+            <div class="ThemDauSach-field ">
+                <i class="fas fa-industry"></i>
+                <input type="text" class="ThemDauSach-input " placeholder="Nhập nhà xuất bản" required>
+            </div>
+            <div class=" ThemDauSach-field ThemDauSach-img">
+                <input type="file">
+                <img src="~/Assets/img/logoHuflit.png" alt="HinhSach">
+            </div>
+            <!-- <div class="ThemDauSach-field changePass-input-pass">
+                <input type="file" class="ThemDauSach-input ">
+            </div>                      -->
+
+            <button type="submit" class="changePass-submit">Thêm đầu sách</button>
+
+            <div class="mess-error-changePass">Message Error</div> <!-- bỏ viewbag vào đây -->
+
+
+        </form>
+    </div>
+
+
+</body>
+</html>
