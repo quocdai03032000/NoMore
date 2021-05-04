@@ -283,3 +283,87 @@ body{
 } */
 
 /*==============================================================================*/
+/***************************************/
+/********** List đầu sách CSS **********/
+/***************************************/
+
+.list_DauSach_table {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    border-radius: 1.5px;
+    margin-top: 25px;
+}
+
+.table_DauSach {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .table_DauSach > thead {
+        background-color: #6a6a97;
+    }
+
+        .table_DauSach > thead > tr > td {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+    .table_DauSach td {
+        padding: 10px;
+    }
+
+tbody > tr {
+    border-top: 0.5px solid rgba(105, 105, 105, 0.329);
+}
+
+    tbody > tr > td {
+        font-size: 12.5px;
+    }
+
+.icon_status {
+    font-size: 5px;
+    color: red;
+}
+
+.table_DauSach_status {
+    color: red;
+    width: 100px;
+}
+
+.table_DauSach_btn > a {
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    outline: none;
+    /* background-color: #FFD700; */
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+}
+
+    .table_DauSach_btn > a:hover,
+    .table_DauSach_btn > a:active {
+        border-style: none;
+        background-color: #FFD700;
+    }
+
+/* ***** CSS các cột của bảng ***** */
+.table_DauSach_MaSach {
+    width: 75px;
+}
+
+.table_DauSach_SoLuong {
+    width: 80px;
+}
+
+.table_DauSach_NamXuatBan {
+    width: 110px;
+}
+
+/*============================================*/
+/*============================================*/
+/*============================================*/

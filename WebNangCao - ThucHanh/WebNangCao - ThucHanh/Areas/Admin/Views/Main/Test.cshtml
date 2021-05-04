@@ -1,0 +1,65 @@
+﻿@model WebNangCao___ThucHanh.Models.DauSach
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+</head>
+<body>
+
+    <div class="list_DauSach_table">
+
+        <table class="table_DauSach">
+            <thead>
+                <tr>
+                    <td class="table_DauSach_MaSach">Mã sách</td>
+                    <td>Tên Sách</td>
+                    <td>Tác giả</td>
+                    <td>Thể loại</td>
+                    <td class="table_DauSach_NamXuatBan">Năm xuất bản</td>
+                    <td class="table_DauSach_SoLuong">Số lượng</td>
+                    <td>Trạng thái</td>
+                    <td>...</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Đắc Nhân Tâm</td>
+                    <td>abc</td>
+                    <td>Tiểu thuyết</td>
+                    <td>1990</td>
+                    <td>10</td>
+                    <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Đang mượn</td>
+                    <td class="table_DauSach_btn">
+                        <a href="#">Thêm sách</a>
+                        <a href="#">Sửa</a>
+                        <a href="#">Xóa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Truyện đọc Pháp - Harry Potter - Tome 1 </td>
+                    <td>abc</td>
+                    <td>Tiểu thuyết</td>
+                    <td>1990</td>
+                    <td>10</td>
+                    <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Còn sách</td>
+                    <td class="table_DauSach_btn">
+                        <a href="#">Thêm sách</a>
+                        <a href="#">Sửa</a>
+                        <a href="#">Xóa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
+

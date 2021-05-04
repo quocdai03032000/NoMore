@@ -13,5 +13,10 @@ namespace WebNangCao___ThucHanh.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Test()
+        {
+            return View();
+        }
     }
 }

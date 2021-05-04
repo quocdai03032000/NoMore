@@ -16,13 +16,13 @@
         <div class="Header_Dau_Sach">
             <div class="row align-items-center ">
                 <div class="col-md-4 ">
-                    <h3 class="Dau-sach-header-content"> Danh sách sách thư viện</h3>                   
+                    <h3 class="Dau-sach-header-content">Danh sách thẻ thư viện</h3>                   
                 </div>
                 <div class="col-md-4 DauSach-btn-search">
                     <input type="search" placeholder="Search....">
                 </div>
                 <div class="col-md-4">
-                    <a class="DauSach-btn-add" href="#">Thêm sách</a>
+                    <a class="DauSach-btn-add" href="#">Tạo thẻ mới</a>
                 </div>          
             </div>          
         </div>
@@ -32,22 +32,27 @@
             <table class="table_DauSach">
                 <thead>
                     <tr>                       
-                        <td>Tên Sách</td>
-                        <td>Số kiểm soát</td>                                           
-                        <td>Trạng thái</td>
-                        <td class="sach-GhiChu">Ghi chú</td>
+                        <td>Mã thẻ</td>                                                               
+                        <td>Họ tên</td>
+                        <td>Tình trạng</td>    
+                        <td>Ngày đăng ký</td>
+                        <td>Ngày hết hạn</td>
+                        <td>Ghi chú</td>
                         <td class="table_DauSach_ChucNang"></td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>                        
-                        <td>Đắc Nhân Tâm</td>
-                        <td>abc</td>                                              
-                        <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Đang mượn</td>
-                        <td>Bị mất 3 trang mục lục</td> 
-                        <td class="table_DauSach_btn">                             
-                            <a href="#"><i class="fas fa-wrench"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt"></i></a>                            
+                        <td>18DH110219</td>                                                               
+                        <td>Trần Quốc Đại</td>
+                        <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Đang mượn</td>  
+                        <td>4/5/2021</td>
+                        <td>4/5/2025</td>
+                        <td>Quá hạn 3 ngày chưa trả</td>
+                        <td class="theTV-btn">   
+                            <a class="fix" href="#"><i class="fas fa-wrench"></i></a>                  
+                            <a class="block" href="#"><i class="fas fa-lock"></i></a>
+                            <a class="del" href="#"><i class="fas fa-trash-alt"></i></a>                            
                         </td>                   
                     </tr>                
                 </tbody>

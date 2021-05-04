@@ -207,7 +207,9 @@ body{
     
 
 
-/*========== phần thân register =============*/
+/***************************************/
+/************** change Pass CSS **********/
+/***************************************/
 
 .changePass-field{
     display: flex;
@@ -278,10 +280,63 @@ body{
 
 
 /***************************************/
-/********** List đầu sách CSS **********/
+/************** đầu sách CSS **********/
 /***************************************/
 
-.list_sach_table{
+/****** header *******/
+.Header_Dau_Sach{
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    height: 55px;
+}
+.Dau-sach-header-content{
+    font-size: 20px;    
+    margin-left: 50px;
+    margin-top: 15px;
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+    color:#394551 ;
+    
+}
+.DauSach-btn-search{   
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.493);
+    margin-top: 7px;   
+}
+.DauSach-btn-search >input{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    font-family: "Abeezee",sans-serif;
+    width: 97%;
+}
+
+.DauSach-btn-add{
+    float: right;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Abeezee",sans-serif;
+    background-color: #394551;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-right: 100px ;
+    margin-top: 7px;
+    text-decoration: none;
+}
+.DauSach-btn-add:hover{
+    text-decoration: none;
+    color: white;
+    background-color:#313c47 ;
+}
+
+
+
+/************** table ****************/
+.list_DauSach_table{
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
@@ -290,23 +345,26 @@ body{
     border-radius: 1.5px;
     margin-top: 25px;
 }
-.table_sach{
+.table_DauSach{
     text-align: center;
     border-collapse: collapse;
     width: 100%;
     
 }
 
-.table_sach > thead{
-    background-color: #6a6a97;    
+.table_DauSach > thead{
+    background-color: #394551;    
+    color: white;
+    font-weight: 400;
+ 
 }
 
-.table_sach > thead > tr >td
+.table_DauSach > thead > tr >td
 {
     font-size: 13px;
     font-weight: bold;
 } 
-.table_sach  td{
+.table_DauSach td{
     padding: 10px;
 }
 
@@ -321,21 +379,209 @@ tbody >tr >td{
     font-size: 5px;
     color: red;
 }
-.table_sach_status{
+.table_DauSach_status{
     color: red; 
     width: 100px;
 }
 
+.table_DauSach_btn > a{
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    outline: none;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;   
+    color: black;  
+
+}
+
+.table_DauSach_btn > a:hover,
+.table_DauSach_btn > a:active{
+    color: white;
+    background-color:#394551 ;
+  
+    
+}
+tbody > tr:hover{
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
 /* ***** CSS các cột của bảng ***** */
-/* .table_sach_MaSach{
+.table_DauSach_MaSach{
     width: 75px;
 }
-.table_sach_SoLuong{
+.table_DauSach_SoLuong{
     width:80px;
 }
-.table_sach_NamXuatBan{
+.table_DauSach_NamXuatBan{
     width:110px;
-} */
+}
+.table_DauSach_ChucNang{
+    width: 185px;
+}
+
+/*============================================*/
+/*=============== Thêm đầu sách ===============*/
+/*============================================*/
+
+.Them-Dau-sach-header-content{
+    text-align: center;
+    font-size: 20px;   
+    margin-top: 15px;
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+    color:#394551 ;
+}
+
+
+.ThemDauSach-field{
+    display: flex;
+    align-items: center;   
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+    
+}
+
+.ThemDauSach-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+.ThemDauSach-img > img{
+    width: 100px;
+}
+
+.mess-suss-ThemDauSach{
+    color:#229b6a;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 600;
+   
+}
+
+.title-SuaDauSach{
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-size: 13px;
+    color: rgb(0, 0, 192);    
+    font-family: "Abeezee",sans-serif;
+}
+
+/*============================================*/
+/*============== Sách ==============*/
+/*============================================*/
+
+.sach-GhiChu{
+    width: 250px;
+}
+
+/*============================================*/
+/*============== Yêu cầu mở thẻ TV==============*/
+/*============================================*/
+
+.theTV-btn > a{
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    outline: none;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;   
+    color: black;      
+
+}
+.theTV-btn > .suss:hover,
+.theTV-btn > .suss:active{
+    color: white;
+    background-color:#009431 ;
+    border:1px solid #009431 ;
+}
+.theTV-btn > .del:hover,
+.theTV-btn > .del:active{
+    color: white;
+    background-color:#940000 ;
+    border:1px solid #940000 ;
+}
+
+/*============================================*/
+/*============== danh sách thẻ TV==============*/
+/*============================================*/
+
+
+.theTV-btn > .fix:hover,
+.theTV-btn > .fix:active{
+    color: white;
+    background-color:#009431 ;
+    border:1px solid #009431 ;
+}
+.theTV-btn > .block:hover,
+.theTV-btn > .block:active{
+    color: white;
+    background-color:#e2de00 ;
+    border:1px solid #e2de00 ;
+    color: black;
+}
+.theTV-btn > .del:hover,
+.theTV-btn > .del:active{
+    color: white;
+    background-color:#940000 ;
+    border:1px solid #940000 ;
+}
+
+/*============================================*/
+/*==============   Nhập sách   ==============*/
+/*============================================*/
+
+h4{
+    display: inline;
+    font-size: 20px;   
+    font-family: "Abeezee",sans-serif;
+}
+.NhapSach-TenSach,.NhapSach-MaSach,.NhapSach-TinhTrang{
+    margin-left: 5px;    
+    margin-bottom: 7px;
+}
+.NhapSach-TenSach-conten{
+    font-size: 22px;
+    font-weight: bold;  
+    color: #229B6A;
+}
+.NhapSach-TinhTrang > select{
+    font-size: 17px;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 3px;
+}
+.NhapSach-SoKiemSoat{
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+.NhapSach-SoKiemSoat>input{
+    font-size: 17px;
+    
+}
+.NhapSach-GhiChu{
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    color: #4B4B4B;
+    margin-bottom: 10px;
+}
+
+
 
 /*============================================*/
 /*============================================*/

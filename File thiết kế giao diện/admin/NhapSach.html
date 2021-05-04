@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ******* link ****** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style_Layout.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- ******************* -->
+</head>
+<body>
+    
+    <!-- ***************************** -->
+    <!-- Render body -->
+    <!-- ChangePass start -->
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+                                  
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Thêm sách</h3> 
+            </div>
+            <div class="col-md-4">
+                <a class="DauSach-btn-add" href="#">Quay lại</a>
+            </div>          
+        </div>          
+    </div>    
+    
+    <div class="login_register">
+        <form action="javascrip:void(0);" class="changePass">        
+            <div class="NhapSach-TenSach"><h4>Tên sách : <h4 class="NhapSach-TenSach-conten">Đắc Nhân Tâm</h4></h4></div>
+            <div class="NhapSach-MaSach"><h4>Mã đầu sách : <h4 class="NhapSach-TenSach-conten">15</h4></h4></div>            
+            <div class="NhapSach-TinhTrang">
+                <h4>Tình trạng: </h4>
+                <Select>
+                    <option value="1">Còn sách</option>
+                    <option value="2">Cho mượn</option>
+                    <option value="3">Mất</option>
+                    <option value="4">Hỏng</option>
+                </Select>
+            </div>
+            <div class="changePass-field NhapSach-SoKiemSoat ">            
+                <input type="number" class="changePass-input  " placeholder="Nhập số kiểm soát" required>
+            </div>
+           <textarea class="NhapSach-GhiChu" placeholder=" Ghi chú..." cols="33" rows="5"></textarea>             
+
+            <button type="submit" class="changePass-submit">Thêm sách</button>
+            
+            <div class="mess-error-changePass">Trùng số kiểm soát !</div> <!-- bỏ viewbag vào đây -->
+            
+    
+        </form>
+    </div>
+    
+    
+
+
+
+</body>
+</html>

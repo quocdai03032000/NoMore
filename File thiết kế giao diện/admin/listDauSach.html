@@ -16,13 +16,13 @@
         <div class="Header_Dau_Sach">
             <div class="row align-items-center ">
                 <div class="col-md-4 ">
-                    <h3 class="Dau-sach-header-content"> Danh sách sách thư viện</h3>                   
+                    <h3 class="Dau-sach-header-content"> Danh sách đầu sách</h3>                   
                 </div>
                 <div class="col-md-4 DauSach-btn-search">
                     <input type="search" placeholder="Search....">
                 </div>
                 <div class="col-md-4">
-                    <a class="DauSach-btn-add" href="#">Thêm sách</a>
+                    <a class="DauSach-btn-add" href="#">Thêm đầu sách</a>
                 </div>          
             </div>          
         </div>
@@ -31,25 +31,49 @@
             
             <table class="table_DauSach">
                 <thead>
-                    <tr>                       
+                    <tr>
+                        <td class="table_DauSach_MaSach">Mã sách</td>
                         <td>Tên Sách</td>
-                        <td>Số kiểm soát</td>                                           
+                        <td>Tác giả</td>
+                        <td>Thể loại</td>
+                        <td class="table_DauSach_NamXuatBan">Năm xuất bản</td>
+                        <td class="table_DauSach_SoLuong">Số lượng</td>
                         <td>Trạng thái</td>
-                        <td class="sach-GhiChu">Ghi chú</td>
                         <td class="table_DauSach_ChucNang"></td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>                        
+                    <tr>
+                        <td>1</td>
                         <td>Đắc Nhân Tâm</td>
-                        <td>abc</td>                                              
+                        <td>abc</td>
+                        <td>Tiểu thuyết</td>
+                        <td>1990</td>
+                        <td>10</td>
                         <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Đang mượn</td>
-                        <td>Bị mất 3 trang mục lục</td> 
-                        <td class="table_DauSach_btn">                             
+                        <td class="table_DauSach_btn"> 
+                            
                             <a href="#"><i class="fas fa-wrench"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt"></i></a>                            
+                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#">Thêm sách</a>
                         </td>                   
-                    </tr>                
+                    </tr>
+                   
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>Truyện đọc Pháp - Harry Potter - Tome 1 </td>
+                        <td>abc</td>
+                        <td>Tiểu thuyết</td>
+                        <td>1990</td>
+                        <td>10</td>
+                        <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> Còn sách</td>
+                        <td class="table_DauSach_btn"> 
+                            <a href="#">Thêm sách</a>
+                            <a href="#">Sửa</a>
+                            <a href="#">Xóa</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
