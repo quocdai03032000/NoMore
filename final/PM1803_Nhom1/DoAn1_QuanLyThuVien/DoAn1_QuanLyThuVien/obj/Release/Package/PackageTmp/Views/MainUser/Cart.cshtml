@@ -1,0 +1,104 @@
+﻿@model DoAn1_QuanLyThuVien.Models.Cart
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+
+<body>
+    <h4 class="muonSachThanhCong">@ViewBag.ThueSachMess</h4>
+    <!-- Cart Start -->
+    <div class="cart-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart-page-inner">
+                        <div class="table-responsive">
+                            @using (Html.BeginForm())
+                            {
+                                <table class="table table-bordered">
+
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Tên sách</th>
+                                            <th>Số lượng</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">
+                                        @foreach (var item in Model.Items)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="img">
+                                                        <a href="#"><img src="@Url.Content(item.HinhAnh)" alt="Image"></a>
+                                                        <p>@Html.DisplayFor(mode => item.sach.DauSach.TenSach)</p>
+                                                    </div>
+                                                </td>
+                                                <td>1</td>
+                                                <td><a class="XoaCart" href="@Url.Action("RemoveCart","MainUser",new { id = item.sach.id})"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                        }                                        
+                                    </tbody>
+                                </table>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cart-page-inner">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @using (Html.BeginForm("ThueSach", "MainUser"))
+                                {
+                                    <div class="cart-summary">
+                                        <div class="cart-content">
+                                            <h1>Yêu cầu mượn</h1>
+                                            <p>MSSV<span>@ViewBag.MSSV</span></p>
+                                            <p>Họ tên<span>@ViewBag.TenUse</span></p>
+                                            <p>Ngày mượn<span>@DateTime.Now</span></p>
+                                            <h2>Ngày trả<span>@DateTime.Now.AddDays(15)</span></h2>
+                                        </div>
+                                        <div class="cart-btn">
+                                            <button>MƯỢN</button>
+                                        </div>
+                                    </div>
+                                    if(Session["MessThueSach"]=="suss")
+                                    {
+                                        <script type="text/javascript">
+                                            alert('Đăng ký mượn sách thành công!');
+                                        </script>
+                                        Session["MessThueSach"] = null;
+                                    }
+                                    else if (Session["MessThueSach"] == "fail")
+                                    {
+                                        <script type="text/javascript">
+                                            alert('Không thể mượn do bạn chưa trả sách \nVui lòng trả hết sách trước khi mượn!');
+                                        </script>
+                                        Session["MessThueSach"] = null;
+                                    }
+                                    else if (Session["FailAddCart"] == "fail")
+                                    {
+                                        <script type="text/javascript">
+                                            alert('Không thể mượn \nVượt quá số lần mượn sách tối đa')
+                                        </script>
+                                        Session["FailAddCart"] = null;
+                                    }
+                                }
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart End -->
+
+
+</body>
+
+</html>
+
+

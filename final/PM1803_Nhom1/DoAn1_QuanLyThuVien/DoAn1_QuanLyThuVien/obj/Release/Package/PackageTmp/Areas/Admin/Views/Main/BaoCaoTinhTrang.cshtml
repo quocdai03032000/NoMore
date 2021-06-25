@@ -1,0 +1,74 @@
+﻿@model DoAn1_QuanLyThuVien.Models.Sach
+
+@{
+    ViewBag.Title = "Thống kê";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+
+        @using (Html.BeginForm("BaoCaoTinhTrang", "Main"))
+        {
+            <div class="Header_Dau_Sach">
+                <div class="row align-items-center ">
+                    <div class="col-md-4 ">
+                        <h3 class="Dau-sach-header-content">Báo cáo mượn sách</h3>
+                    </div>
+                    <div class="col-md-4 DauSach-btn-search">
+                        <input type="search" placeholder="Search....">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="list_DauSach_table">
+
+                <table class="table_DauSach">
+                    <thead>
+                        <tr>
+                            <td>Tổng số đầu sách</td>
+                            <td>Tổng số sách</td>
+                            <td>Tổng số sách cho mượn</td>
+                            <td>Tổng số sách hỏng</td>
+                            <td>Tổng số sách mất</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@ViewBag.slDauSach</td>
+                            <td>@ViewBag.slSach</td>
+                            <td>@ViewBag.slSachMuon</td>
+                            <td>@ViewBag.slSachHong</td>
+                            <td>@ViewBag.slSachMat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            @*<div class="list_DauSach_table">
+
+                <table class="table_DauSach">
+                    <thead>
+                        <tr>
+                            <td colspan="2">Danh sách sách hỏng</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Số kiểm soát</td>
+                            <td>Tên sách</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>*@
+        }
+        
+
+
+
+
+</body>
+</html>
+

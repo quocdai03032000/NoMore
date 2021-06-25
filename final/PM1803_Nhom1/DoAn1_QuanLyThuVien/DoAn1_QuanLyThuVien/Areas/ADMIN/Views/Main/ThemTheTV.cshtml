@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Thêm thẻ thư viện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<body>
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Thêm thẻ thư viện</h3>
+            </div>
+            <div class="col-md-4">
+                <a class="DauSach-btn-add" href="@Url.Action("DsTheThuVien","Main")">Quay lại</a>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="login_register">
+            <div class="register">
+                <div class="register-field">
+                    <i class="register-icon fas fa-user"></i>
+                    <input type="text" class="register-input" placeholder="Nhập MSSV" required name="MSSV">
+                </div>
+                <div class="register-field">
+                    <i class="fas fa-barcode"></i>
+                    <input type="text" class="register-input" placeholder="Nhập họ và tên" required name="HoTen">
+                </div>
+                <div class="register-field">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" class="register-input" placeholder="Nhập email" required name="email">
+
+                </div>
+
+                <a href="#" class="home_back"><i class="fas fa-angle-left"></i> Quay về</a>
+                <button type="submit" class="register-submit">Đăng ký</button>
+                <div class="mess-error-changePass">@ViewBag.ThemTheTV</div> <!-- bỏ viewbag vào đây -->
+            </div>
+        </div>
+    }
+    
+</body>
+</html>

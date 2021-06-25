@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.DangKyTheTV> 
+
+@{
+    ViewBag.Title = "Danh sách đăng ký thẻ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    @using (Html.BeginForm("DsDangKyTheTV", "Main"))
+    {
+        <div class="Header_Dau_Sach">
+            <div class="row align-items-center ">
+                <div class="col-md-4 ">
+                    <h3 class="Dau-sach-header-content">Danh sách đăng ký thẻ thư viện</h3>
+                </div>
+                <div class="col-md-4 DauSach-btn-search">
+                    <input type="search" placeholder="Nhập MSSV...." name="_name">
+                </div>
+                <div class="col-md-4">
+                    <a class="DauSach-btn-add" href="@Url.Action("ThemTheTV","Main")">Tạo thẻ mới</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="list_DauSach_table">
+
+            <table class="table_DauSach">
+                <thead>
+                    <tr>
+                        <td>Mã thẻ</td>
+                        <td>Mật khẩu</td>
+                        <td>Họ tên</td>
+                        <td>Email</td>
+                        <td>Ngày đăng ký</td>
+                        <td class="table_DauSach_ChucNang"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(a=>item.MaThe)</td>
+                            <td>@Html.DisplayFor(a=>item.Password)</td>
+                            <td>@Html.DisplayFor(a => item.HoTen)</td>
+                            <td>@Html.DisplayFor(a => item.email)</td>
+                            <td>@Html.DisplayFor(a => item.NgayLam)</td>
+                            <td class="theTV-btn">                                
+                                <a class="suss" href="@Url.Action("ThemTheTV_form_DS","Main",new {id=item.MaDangKyThe})"><i class="fas fa-check"></i></a>
+                                <a class="del" href="@Url.Action("XoaTheTV_form_DS","Main",new {id=item.MaDangKyThe})"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+                   
+                </tbody>
+            </table>
+        </div>
+    }
+
+
+
+</body>
+</html>
+

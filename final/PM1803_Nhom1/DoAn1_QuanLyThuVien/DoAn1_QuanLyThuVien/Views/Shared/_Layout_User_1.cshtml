@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ******* link ****** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+    <link href="~/Assets/User/style_Layout.css" rel="stylesheet" />
+    <link href="~/Assets/User/style.css" rel="stylesheet" />
+    <!-- ******************* -->
+
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="bottom-bar">
+
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <div class="logo">
+                    <a href="@Url.Action("Index","MainUser")">
+                        HUFLIT Library
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="@Url.Action("Cart","MainUser")"><i class="fas fa-book-reader"></i> Giỏ hàng</a>
+                </div>
+                <div class="Header_contact">
+                    <a href="@Url.Action("Contact","MainUser")"><i class="fas fa-phone-alt"></i> Liên hệ</a>
+                </div>
+                <div class="nameAdmin">
+                    @{
+                        if (Session["User"] != null)
+                        {
+                            <a href="@Url.Action("XemThongTinChiTiet","MainUser")"> <i class="fas fa-user-circle icon admin"></i> @Session["User"]</a>
+                                <ul class="submenu_admin">
+                                    <li><a href="@Url.Action("ChangePass","MainUser")">Đổi mật khẩu</a></li>
+                                    <li><a href="@Url.Action("Logout","MainUser")">Đăng xuất</a></li>
+                                </ul>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Login","MainUser")"> <i class="fas fa-user-circle icon admin"></i> Đăng nhập</a>
+                                <ul class="submenu_admin">
+                                    <li><a href="@Url.Action("Register","MainUser")">Đăng ký</a></li>
+                                    @*<li><a>Đăng xuất</a></li>*@
+                                </ul>
+
+                        }
+                    }
+                    
+                    @*<a href="@Url.Action("Login","Main")"> <i class="fas fa-user-circle icon admin"></i> Đăng nhập</a>
+                    <ul class="submenu_admin">
+                        <li><a href="@Url.Action("Register","Main")">Đăng ký</a></li>
+                        <li><a>Đăng xuất</a></li>*
+                    </ul>*@
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- menu header End -->
+    <!-- ***************************** -->
+
+    <!-- Render body -->
+    @RenderBody();
+
+    <!-- ***************************** -->
+    <!-- fotter start -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>HUFLIT</h2>
+                        <div class="contact-info">
+                            <p><i class="fa fa-map-marker"></i>828 Sư Vạn Hạnh, Phường 13, Quận 10, TP.HCM</p>
+                            <p><i class="fa fa-envelope"></i>contact@huflit.edu.vn</p>
+                            <p><i class="fa fa-phone"></i>(+84 28) 38 632 052 - 38 629 232</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Follow Us</h2>
+                        <div class="contact-info">
+                            <div class="social">
+                                <a href="https://www.facebook.com/huflit.edu.vn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://portal.huflit.edu.vn/"><i class="fas fa-globe-africa"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Sinh viên thực hiện</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/quocdai03.3/" target="_blank">Trần Quốc Đại</a></li>
+                            <li><a href="https://www.facebook.com/namle2610" target="_blank">Lê Hoàng Nam</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100006743716186" target="_blank">Nguyễn Anh Khoa</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2 class="flag">Purchase Info</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/caotaibest" target="_blank">Cao Hữu Tài</a></li>
+                            <li><a href="https://www.facebook.com/taay0301" target="_blank">Trương Đức Nhật Tây</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+</body>
+
+</html>

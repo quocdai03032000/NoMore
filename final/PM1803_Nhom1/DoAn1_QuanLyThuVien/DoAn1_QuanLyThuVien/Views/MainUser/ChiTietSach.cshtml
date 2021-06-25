@@ -1,0 +1,137 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.Sach>
+
+@{
+    ViewBag.Title = "Chi tiết sách";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+
+<style>
+    body {
+        min-height:100vh;
+    }
+</style>
+
+<body >
+
+
+
+    @ViewBag.AddToCart
+    <div class="product-detail">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="product-detail-top">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <div class="product-slider-single normal-slider">
+                                    <img src="@Url.Content(ViewBag.hinhAnh)" alt="sach" >
+                                </div>
+
+                            </div>
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <div class="title">
+                                        <h2> @ViewBag.TenDauSach</h2>
+                                    </div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h4>Tác giả:</h4>
+                                        <h5>@ViewBag.TacGia </h5>
+                                    </div>
+                                    <div class="quantity">
+                                        <h4>Số lượng:</h4>
+                                        <h5 style="display: inline;">@ViewBag.SoLuong</h5>
+                                    </div>
+                                    <div class="quantity">
+                                        <h4>Năm xuất bản:</h4>
+                                        <h5 style="display: inline;">@ViewBag.NamXB</h5>
+                                    </div>
+                                    <div class="p-size">
+                                        <h4>NXB:</h4>
+                                        <div class="btn-group btn-group-sm">
+                                            <h5>@ViewBag.NXB</h5>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-color">
+                                        <h4>Thể loại:</h4>
+                                        <div class="btn-group btn-group-sm">
+                                            <h5>@ViewBag.TheLoai</h5>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="action">
+                                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                                        </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-lg-5 sidebar">
+                    <div class="chi-tiet">
+                        <div class="sidebar-widget category">
+                            <h2 class="title">Sách có thể mượn</h2>
+                        </div>
+
+                        <div class="sidebar-widget widget-slider">
+                            <div class="sidebar-slider normal-slider">
+                                <div class="product-item">
+
+                                    @using (Html.BeginForm())
+                                    {
+
+
+                                        <table class="table_DauSach">
+                                            <thead>
+                                                <tr>
+                                                    <td>Mã</td>
+                                                    <td>Tên Sách</td>
+                                                    <td></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@Html.DisplayFor(a => item.SoKiemSoat)</td>
+                                                        <td>@Html.DisplayFor(a => item.DauSach.TenSach)</td>
+                                                        <td class="table_DauSach_btn">
+                                                            <a href="@Url.Action("AddToCart","MainUser",new { id=item.id})">Mượn</a>
+                                                        </td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+               
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+@*<script>
+    if (Session["FailAddCart"] = "fail")
+    {
+        alert('Chỉ được mượn từ 3 quyển trở xuống !');
+    }
+</script>*@

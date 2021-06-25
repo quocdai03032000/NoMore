@@ -1,0 +1,5 @@
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\bin\Release\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\bin\Release\Common.pdb
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Release\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Release\Common.pdb

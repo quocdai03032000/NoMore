@@ -1,0 +1,78 @@
+﻿@model DoAn1_QuanLyThuVien.Models.DauSach
+
+@{
+    ViewBag.Title = "Sửa đầu sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<body>
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Sửa đầu sách</h3>
+            </div>
+            <div class="col-md-4">
+                <a class="DauSach-btn-add" href="@Url.Action("DauSach","Main")">Quay lại</a>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="login_register">
+            <div class="changePass">
+                <div class="mess-suss-ThemDauSach">@ViewBag.SuaDauSach_suss</div> <!-- bỏ viewbag vào đây -->
+                <p class="title-SuaDauSach">*Mã sách</p> 
+                <div class="ThemDauSach-field">
+                    <i class="fas fa-barcode"></i>                  
+                    @Html.EditorFor(model => model.MaDauSach, new { htmlAttributes = new { @class = "ThemDauSach-input", @readonly= "readonly" } })
+                </div>
+                <p class="title-SuaDauSach">*Tên sách</p> 
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-book"></i>                   
+                    @Html.TextBoxFor(model => model.TenSach, new { @class = "ThemDauSach-input" })
+                </div>
+                <p class="title-SuaDauSach">*Tên tác giả</p> 
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-user-edit"></i>                   
+                    @Html.TextBoxFor(model => model.TacGia, new { @class = "ThemDauSach-input" })
+                </div>
+                <p class="title-SuaDauSach">*Tên thể loại</p> 
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-caret-down"></i>                    
+                    @Html.TextBoxFor(model => model.TheLoai, new { @class = "ThemDauSach-input" })
+                </div>
+                <p class="title-SuaDauSach">*Năm xuất bản</p> 
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-hand-point-right"></i>       
+                    @Html.TextBoxFor(model => model.NamXuatBan, new { @class = "ThemDauSach-input", @pattern = "[0-9]{1,4}", @title = "Vui lòng nhập số!" })
+                </div>
+                <p class="title-SuaDauSach">*Nhà xuất bản</p> 
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-industry"></i>               
+                    @Html.TextBoxFor(model => model.NhaXuatBan, new { @class = "ThemDauSach-input" })
+                </div>
+                @*<p class="title-SuaDauSach">Mã sách</p>*@ 
+                <div class=" ThemDauSach-field ThemDauSach-img">
+                    <input type="file" value="img" name="imageUploader" onchange="ShowImg(this, document.getElementById('previewImg'))" />
+                    <img src="@Url.Content(Model.HinhAnh)" id="previewImg" alt="Hinh anh sach">
+                    @*<input type="file">
+                    <img src="../img/logoHuflit.png" alt="HinhSach">*@
+                </div>              
+
+                <button type="submit" class="changePass-submit">Sửa đầu sách</button>
+
+                <div class="mess-error-changePass">@ViewBag.SuaDauSach_error</div> <!-- bỏ viewbag vào đây -->
+            </div>
+            
+            
+        </div>
+    }
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@model DoAn1_QuanLyThuVien.Models.DauSach
+
+@{
+    ViewBag.Title = "Thêm đầu sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<body>
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Thêm đầu sách</h3>
+            </div>
+            <div class="col-md-4">
+                <a class="DauSach-btn-add" href="@Url.Action("DauSach","Main")"> <i class="fas fa-chevron-left"></i> Quay lại</a>
+            </div>
+        </div>
+    </div>   
+    @using (Html.BeginForm("ThemDauSach", "Main", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken();
+        @Html.HiddenFor(model => model.HinhAnh)
+        <div class="login_register">
+            <div class="changePass">
+                <div class="mess-suss-ThemDauSach">@ViewBag.ThemDauSach</div> <!-- bỏ viewbag vào dây -->
+                <div class="ThemDauSach-field">
+                    <i class="fas fa-barcode"></i>                   
+                    <input type="text" class="ThemDauSach-input" placeholder="Nhập mã sách" required name="MaDauSach" pattern="[0-9]{1,4}" title="Vui lòng nhập số">
+                </div>
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-book"></i>
+                    @*@Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "ThemDauSach-input",@placeholder = "Nhập tên sách" } })*@
+                    <input type="text" class="ThemDauSach-input " placeholder="Nhập tên sách" required name="_name">
+                </div>
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-user-edit"></i>
+                    @*@Html.EditorFor(model => model.TacGia, new { htmlAttributes = new { @class = "ThemDauSach-input", @placeholder = "Nhập tác giả" } })*@
+                    <input type="text" class="ThemDauSach-input " placeholder="Nhập tác giả" required name="_tg">
+                </div>
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-caret-down"></i>
+                    @*@Html.EditorFor(model => model.TheLoai, new { htmlAttributes = new { @class = "ThemDauSach-input", @placeholder = "Nhập thể loại" } })*@
+                    <input type="text" class="ThemDauSach-input " placeholder="Nhập thể loại" required name="_tl">
+                </div>
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-hand-point-right"></i>
+                    @*@Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "ThemDauSach-input", @placeholder = "Nhập năm xuất bản", @requiredpattern = "[0-9]{1,4}", @title = "Vui lòng nhập số!" } })*@
+                    <input type="text" class="ThemDauSach-input " placeholder="Nhập năm xuất bản" required pattern="[0-9]{1,4}" title="Vui lòng nhập số!" name="year">
+                </div>
+                <div class="ThemDauSach-field ">
+                    <i class="fas fa-industry"></i>
+                    @*@Html.EditorFor(model => model.NhaXuatBan, new { htmlAttributes = new { @class = "ThemDauSach-input", @placeholder = "Nhập nhà xuất bản" } })*@
+                    <input type="text" class="ThemDauSach-input " placeholder="Nhập nhà xuất bản" required name="NXB">
+                </div>
+                <div class=" ThemDauSach-field ThemDauSach-img">                  
+                    <input type="file" value="img" name="imageUploader" onchange="ShowImg(this, document.getElementById('previewImg'))" />
+                    <img src="@Url.Content(Model.HinhAnh)" id="previewImg" alt="Hinh anh sach">                            
+                </div>              
+
+                <button type="submit" class="changePass-submit">Thêm đầu sách</button>
+                
+            </div>
+        </div>
+    }
+
+</body>
+</html>
+
+
+@*<script>
+    function ShowImg(imageUploader, previewImg) {
+        if (imageUploader.files && imageUploader.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(previewImg).attr('src', e.target.result);
+            }
+            // doc duong dan cua du lieu
+            reader.readAsDataURL(imageUploader.files[0]);
+        }
+
+    }
+</script>*@

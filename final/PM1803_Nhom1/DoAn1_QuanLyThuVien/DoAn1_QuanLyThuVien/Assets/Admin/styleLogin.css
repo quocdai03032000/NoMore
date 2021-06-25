@@ -1,0 +1,156 @@
+/*==========================================================================*/
+/*========================= CÁC THIẾT LẬP BAN ĐẦU CHO WEBSITE ==============*/
+/*==========================================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+img{
+    display: block;
+    max-width:100%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "Abeezee",sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+}
+
+/*==========================================================================*/
+/*==========================================================================*/
+
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* =========== TRANG LOGIN ========= */
+/*============================================*/
+
+.login{
+    width: 400px;
+    margin: 50px auto;   
+    background: rgba(0, 0, 0, 0.76);   
+    padding: 20px 40px 40px 40px;
+    border: 0.5px solid rgba(0, 0, 0, 0.801);
+
+
+}
+
+/*========== LOGO + tên trường ==============*/
+.header-login{    
+    padding: 0px;
+    margin-bottom: 20px;
+ }
+ .header-login > img{
+     display: block;
+     width: 60%;   
+     margin: 0 auto;
+     margin-bottom: 10px;
+ } 
+ .header-login > h5{
+     text-align: center;
+     color: #e9effaea ;    
+     font-size: 25px;
+     padding: 0;
+     margin: 25px 0 0px;
+
+ }
+ /* =========== Đường line kẻ ngang ============*/
+.line
+{
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 20px;
+    
+}
+.line > .line-or{
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #999;    
+}
+
+    
+
+
+/*========== phần thân Login =============*/
+
+.login-field{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.705);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+    
+}
+.login-icon{
+    color: #e9effa;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.login-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: #e9effa;
+}
+.login-submit{
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #25b37a;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 17px;
+    outline: none;
+
+}
+
+.login-submit:hover{
+    background-color:#229b6a ;
+}
+.login-forgot-password{
+    text-decoration: none;
+    display: block;
+    text-align: right; 
+    margin-bottom: 20px;
+    color: #e9effaea ; 
+    font-weight: 600;
+    font-size: 11px;
+}
+.mess-error {
+    color: #ff0d0d;
+    padding: 0px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 300;
+}
+/*==============================================================================*/

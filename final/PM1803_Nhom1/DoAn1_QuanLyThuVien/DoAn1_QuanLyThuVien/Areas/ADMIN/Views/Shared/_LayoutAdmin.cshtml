@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- ******* link ****** -->   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">   
+    <link href="~/Assets/Admin/styleAdmin.css" rel="stylesheet" />
+    <script src="~/Scripts/IMG_scripts.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <!-- ******************* -->
+
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- ================ header + menu ================ -->
+
+    <div class="menu">
+
+        <ul class="body-menu">
+            <div><a href="#" class="logo"><img src="~/Assets/img/logoHuflit.png" alt="logoHuflit"></a></div>
+
+            <li>
+                <a href="#">Quản lý thư viện</a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Sach","Main")">Quản lý sách</a></li>
+                    <li><a href="@Url.Action("DauSach","Main")">Quản lý đầu sách</a></li>
+                    @*<li><a href="#">Cập nhật tình trạng</a></li>*@
+                </ul>
+            </li>
+            <li><a href="@Url.Action("DsDangKyTheTV","Main")">Yêu cầu mở thẻ</a></li>
+            <li><a href="@Url.Action("DsTheThuVien","Main")">Quản lý thẻ thư viện</a></li>
+            <li>
+                <a href="@Url.Action("QLMuonTraSach","Main")">Quản lý mượn - trả</a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("DSDangKy_MuonSach","Main")">Mượn sách</a></li>                    
+                    <li><a href="@Url.Action("BaoCaoTinhTrang","Main")">Thống kê</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Báo cáo</a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("BaoCaoMuonSach","Main")"> Báo cáo mượn sách</a></li>
+                    <li><a href="@Url.Action("BaoCaoTraSach","Main")"> Báo cáo trả sách</a></li>
+                    @*<li><a href="@Url.Action("BaoCaoTinhTrang","Main")"> Báo cáo tình trạng sách</a></li>*@
+                </ul>
+            </li>
+            <div class="nameAdmin">
+                <a href="#"> <i class="fas fa-user-circle icon admin"></i> ADMIN</a>
+                <ul class="submenu_admin">
+                    <li><a href="@Url.Action("ChangePass","Main")">Đổi mật khẩu</a></li>
+                    <li><a href="@Url.Action("Logout","Main")">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+           <h4>@ViewBag.Mess_BlockTheThuVien</h4>
+    <!-- ================ =================== ================ -->
+    @RenderBody()
+
+
+</body>
+
+</html>

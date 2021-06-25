@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account_Admin">
+    <Key>
+      <PropertyRef Name="MaAccount" />
+    </Key>
+    <Property Name="MaAccount" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BaoCaoMuonSach">
+    <Key>
+      <PropertyRef Name="id_BaoCaoMuonSach" />
+    </Key>
+    <Property Name="id_BaoCaoMuonSach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayMuon" Type="datetime" />
+    <Property Name="Mssv" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSach" Type="int" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenSach" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BaoCaoTraSach">
+    <Key>
+      <PropertyRef Name="id_BaoCaoTraSach" />
+    </Key>
+    <Property Name="id_BaoCaoTraSach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayTra" Type="datetime" />
+    <Property Name="MSSV" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSach" Type="int" />
+    <Property Name="NgayMuon" Type="datetime" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenSach" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DangKyTheTV">
+    <Key>
+      <PropertyRef Name="MaDangKyThe" />
+    </Key>
+    <Property Name="MaDangKyThe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayLam" Type="datetime" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DauSach">
+    <Key>
+      <PropertyRef Name="MaDauSach" />
+    </Key>
+    <Property Name="MaDauSach" Type="int" Nullable="false" />
+    <Property Name="TenSach" Type="nvarchar(max)" />
+    <Property Name="TacGia" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheLoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="NamXuatBan" Type="int" />
+    <Property Name="NhaXuatBan" Type="nvarchar" MaxLength="50" />
+    <Property Name="HinhAnh" Type="nvarchar(max)" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="DKyMuonSach">
+    <Key>
+      <PropertyRef Name="MaDangKyMuonSach" />
+    </Key>
+    <Property Name="MaDangKyMuonSach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSach" Type="int" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoKiemSoat" Type="int" Nullable="false" />
+    <Property Name="MaDauSach" Type="int" />
+    <Property Name="MaTinhTrangSach" Type="int" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Sach_Dang_Muon">
+    <Key>
+      <PropertyRef Name="MaSachMuon" />
+    </Key>
+    <Property Name="MaSachMuon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSach" Type="int" />
+    <Property Name="NgayMuon" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TheThuVien">
+    <Key>
+      <PropertyRef Name="MaThe" />
+    </Key>
+    <Property Name="MaThe" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaTinhTrang" Type="int" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayLam" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TinhTrang_TheTV">
+    <Key>
+      <PropertyRef Name="MaTinhTrang" />
+    </Key>
+    <Property Name="MaTinhTrang" Type="int" Nullable="false" />
+    <Property Name="TenTinhTrang" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TinhTrangSach">
+    <Key>
+      <PropertyRef Name="MaTinhTrangSach" />
+    </Key>
+    <Property Name="MaTinhTrangSach" Type="int" Nullable="false" />
+    <Property Name="TenTinhTrangSach" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_DKyMuonSach_Sach">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="0..1" />
+    <End Role="DKyMuonSach" Type="Self.DKyMuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DKyMuonSach">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DKyMuonSach_TheThuVien">
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="0..1" />
+    <End Role="DKyMuonSach" Type="Self.DKyMuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheThuVien">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="DKyMuonSach">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_Dang_Muon_Sach">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="0..1" />
+    <End Role="Sach_Dang_Muon" Type="Self.Sach_Dang_Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Sach_Dang_Muon">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_Dang_Muon_TheThuVien">
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="0..1" />
+    <End Role="Sach_Dang_Muon" Type="Self.Sach_Dang_Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheThuVien">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="Sach_Dang_Muon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_DauSach">
+    <End Role="DauSach" Type="Self.DauSach" Multiplicity="0..1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DauSach">
+        <PropertyRef Name="MaDauSach" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaDauSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_TinhTrangSach">
+    <End Role="TinhTrangSach" Type="Self.TinhTrangSach" Multiplicity="0..1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrangSach">
+        <PropertyRef Name="MaTinhTrangSach" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTinhTrangSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheThuVien_TinhTrang_TheTV">
+    <End Role="TinhTrang_TheTV" Type="Self.TinhTrang_TheTV" Multiplicity="0..1" />
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrang_TheTV">
+        <PropertyRef Name="MaTinhTrang" />
+      </Principal>
+      <Dependent Role="TheThuVien">
+        <PropertyRef Name="MaTinhTrang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyThuVienModelStoreContainer">
+    <EntitySet Name="Account_Admin" EntityType="Self.Account_Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BaoCaoMuonSach" EntityType="Self.BaoCaoMuonSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BaoCaoTraSach" EntityType="Self.BaoCaoTraSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DangKyTheTV" EntityType="Self.DangKyTheTV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DauSach" EntityType="Self.DauSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DKyMuonSach" EntityType="Self.DKyMuonSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sach" EntityType="Self.Sach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sach_Dang_Muon" EntityType="Self.Sach_Dang_Muon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TheThuVien" EntityType="Self.TheThuVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhTrang_TheTV" EntityType="Self.TinhTrang_TheTV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhTrangSach" EntityType="Self.TinhTrangSach" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DKyMuonSach_Sach" Association="Self.FK_DKyMuonSach_Sach">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="DKyMuonSach" EntitySet="DKyMuonSach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DKyMuonSach_TheThuVien" Association="Self.FK_DKyMuonSach_TheThuVien">
+      <End Role="TheThuVien" EntitySet="TheThuVien" />
+      <End Role="DKyMuonSach" EntitySet="DKyMuonSach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_Dang_Muon_Sach" Association="Self.FK_Sach_Dang_Muon_Sach">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="Sach_Dang_Muon" EntitySet="Sach_Dang_Muon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_Dang_Muon_TheThuVien" Association="Self.FK_Sach_Dang_Muon_TheThuVien">
+      <End Role="TheThuVien" EntitySet="TheThuVien" />
+      <End Role="Sach_Dang_Muon" EntitySet="Sach_Dang_Muon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_DauSach" Association="Self.FK_Sach_DauSach">
+      <End Role="DauSach" EntitySet="DauSach" />
+      <End Role="Sach" EntitySet="Sach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_TinhTrangSach" Association="Self.FK_Sach_TinhTrangSach">
+      <End Role="TinhTrangSach" EntitySet="TinhTrangSach" />
+      <End Role="Sach" EntitySet="Sach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheThuVien_TinhTrang_TheTV" Association="Self.FK_TheThuVien_TinhTrang_TheTV">
+      <End Role="TinhTrang_TheTV" EntitySet="TinhTrang_TheTV" />
+      <End Role="TheThuVien" EntitySet="TheThuVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

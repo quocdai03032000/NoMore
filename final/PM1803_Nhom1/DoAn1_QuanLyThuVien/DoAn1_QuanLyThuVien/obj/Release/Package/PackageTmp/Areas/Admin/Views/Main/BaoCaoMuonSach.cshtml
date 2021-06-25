@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.BaoCaoMuonSach>
+
+@{
+    ViewBag.Title = "Báo cáo mượn";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+    @using (Html.BeginForm("BaoCaoMuonSach", "Main"))
+    {
+        <div class="Header_Dau_Sach">
+            <div class="row align-items-center ">
+                <div class="col-md-4 ">
+                    <h3 class="Dau-sach-header-content">Báo cáo mượn sách</h3>
+                </div>
+                <div class="col-md-4 DauSach-btn-search">
+                    <input name="_name" type="search" placeholder="Nhập MSSV để tìm kiếm....">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="list_DauSach_table">
+
+            <table class="table_DauSach">
+                <thead>
+                    <tr>
+                        <td>Ngày mượn</td>
+                        <td>MSSV</td>
+                        <td>Họ tên</td>
+                        <td>Tên sách</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(a => item.NgayMuon)</td>
+                            <td>@Html.DisplayFor(a => item.Mssv)</td>
+                            <td>@Html.DisplayFor(a => item.HoTen)</td>
+                            <td>@Html.DisplayFor(a => item.TenSach)</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.TheThuVien>
+
+@{
+    ViewBag.Title = "Thẻ thư viện";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+    @using (Html.BeginForm("DsTheThuVien", "Main"))
+    {        
+        <div class="Header_Dau_Sach">
+            <div class="row align-items-center ">
+                <div class="col-md-4 ">
+                    <h3 class="Dau-sach-header-content">Danh sách thẻ thư viện</h3>
+                </div>
+                <div class="col-md-4 DauSach-btn-search">
+                    <input type="search" placeholder="Nhập MSSV...." name="_name">
+                </div>
+                <div class="col-md-4">
+                    <a class="DauSach-btn-add" href="@Url.Action("ThemTheTV","Main")">Tạo thẻ mới</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="list_DauSach_table">
+
+            <table class="table_DauSach">
+                <thead>
+                    <tr>
+                        <td>Mã thẻ</td>
+                        <td>Họ tên</td>
+                        <td>Email</td>
+                        <td>Tình trạng</td>
+                        <td>Ngày đăng ký</td>
+                        <td>Ngày hết hạn</td>
+                        <td>Ghi chú</td>
+                        <td class="table_DauSach_ChucNang"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(a => item.MaThe)</td>
+                            <td>@Html.DisplayFor(a => item.HoTen)</td>
+                            <td>@Html.DisplayFor(a => item.email)</td>
+                            <td class="table_DauSach_status">@Html.DisplayFor(a => item.TinhTrang_TheTV.TenTinhTrang)</td>                            
+                            <td>@Html.DisplayFor(a => item.NgayLam)</td>
+                            <td>@Html.DisplayFor(a => item.NgayHetHan)</td>
+                            <td>@Html.DisplayFor(a=>item.GhiChu)</td>
+                            <td class="theTV-btn">
+                                <a class="fix" href="@Url.Action("ResetPass","Main",new { id=item.MaThe})">@*<i class="fas fa-wrench"></i>*@ Reset password</a>
+                                <a class="block" href="@Url.Action("BlockTheThuVien","Main",new { id=item.MaThe})"><i class="fas fa-lock"></i></a>
+                                <a class="del" href="@Url.Action("XoaTheThuVien","Main",new {id=item.MaThe })"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+       
+    }
+
+
+
+
+</body>
+</html>
+@{
+    if (Session["XoaTheThuVien"] == "true")
+    {
+        <script type="text/javascript">
+            alert('Không thể xoá');
+        </script>
+        Session["XoaTheThuVien"] = null;
+    }
+}
+ 

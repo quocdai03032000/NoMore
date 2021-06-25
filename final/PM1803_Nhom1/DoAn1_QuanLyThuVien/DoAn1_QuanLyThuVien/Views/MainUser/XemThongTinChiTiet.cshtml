@@ -1,0 +1,77 @@
+﻿@model DoAn1_QuanLyThuVien.Models.TheThuVien
+
+@{
+    ViewBag.Title = "Thông tin chi tiết";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+
+
+
+<body>
+    <div class="container-fluid CTT_body">
+        <div class="row">
+
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <div class="container-fluid ">
+                    <div class="row CTT_ThongTin">
+                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 CTT_img">
+                            <img src="~/Content/img/user1.png" alt="anh">
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 CTT_ChiTietThongTin">
+                            <div class="CTT_mssv">
+                                <h4 class="CTT_mssv">MSSV :</h4>
+                                <h5>@ViewBag.ctmssv</h5>
+                            </div>
+                            <div class="CTT_HoTen">
+                                <h4 class="CTT_mssv">Họ tên :</h4>
+                                <h5>@ViewBag.ctHoTen</h5>
+                            </div>
+                            <div class="CTT_TinhTrang">
+                                <h4 class="CTT_mssv">Tình trạng :</h4>
+                                <h5>@ViewBag.ctTinhTrang</h5>
+                            </div>
+                            <div class="CTT_NgayLam">
+                                <h4 class="CTT_mssv">Ngày làm thẻ :</h4>
+                                <h5>@ViewBag.ctNgayLamThe</h5>
+                            </div>
+                            <div class="CTT_NgayHetHan">
+                                <h4 class="CTT_mssv">Ngày hết hạn :</h4>
+                                <h5>@ViewBag.ctNgayHetHan</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 CTT_SachMuon">
+                <div class="CTT_header">
+                    <h3>Chi tiết mượn</h3>
+                </div>
+                <div class="CTT_mssv CTT_soSachMuon">
+                    <h4 class="CTT_mssv">Số sách mượn :</h4>
+                    <h5>@ViewBag.ctSoLuong</h5>
+                </div>
+                <div class="CTT_HoTen">
+                    <h4 class="CTT_mssv">Sách đang mượn :</h4>
+                    <h5>@ViewBag.SachDangMuon</h5>
+                    
+                </div>
+                <div class="CTT_TinhTrang">
+                    <h4 class="CTT_mssv">Ngày mượn :</h4>
+                    <h5>@ViewBag.ctNgayMuon</h5>
+                </div>
+                <div class="CTT_NgayLam">
+                    <h4 class="CTT_mssv">Ngày trả :</h4>
+                    <h5>@ViewBag.ctNgayTra</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+

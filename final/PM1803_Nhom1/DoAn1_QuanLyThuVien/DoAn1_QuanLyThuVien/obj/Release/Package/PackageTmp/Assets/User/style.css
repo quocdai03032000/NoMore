@@ -1,0 +1,980 @@
+/**********************************/
+/********** login CSS ***********/
+/**********************************/
+
+.login_begin{
+    height: 100vh;
+    background-color:rgba(255,255,255,.1) ;
+}
+.login{
+    width: 400px;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px 40px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205) ;
+}
+.header-login{    
+    padding: 0px;
+    margin-bottom: 20px;
+ }
+ .header-login > img{
+     display: block;
+     width: 60%;   
+     margin: 0 auto;
+     margin-bottom: 10px;
+ } 
+ .header-login > h5{
+     text-align: center;
+     color: #007bff ;    
+     font-size: 25px;
+     padding: 0;
+     margin: 25px 0 0px;
+     font-weight: 600;
+
+ }
+ /* =========== Đường line kẻ ngang ============*/
+.line
+{
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 20px;
+    
+}
+.line > .line-or{
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #999;    
+}
+
+    
+
+
+/*========== phần thân Login =============*/
+
+.login-field{
+    display: flex;
+    align-items: center;   
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+    
+}
+.login-icon{    
+    color: rgba(0, 0, 0, 0.705);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.login-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+}
+.login-submit{
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #25b37a;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 17px;
+    outline: none;
+
+}
+.login-input-pass{
+    margin-bottom: 0px;
+}
+.login-submit:hover{
+    background-color:#229b6a ;
+}
+.page_register{
+    text-decoration: none;
+    display: inline-block;
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;    
+    margin: 10px 15px 10px 0px;
+    margin-left: 10px;
+    margin-left: 100px;
+}
+.home_back{
+    text-decoration: none;
+    display: inline-block;
+    text-align: right; 
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;
+    
+}
+
+/**********************************/
+/********** Register CSS **********/
+/**********************************/
+
+.register_begin{
+    height: 100vh;
+    background-color:rgba(255,255,255,.1) ;
+}
+.register{
+    width: 400px;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px 40px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205) ;
+}
+.header-register{    
+    padding: 0px;
+    margin-bottom: 20px;
+ }
+ .header-register > h5{
+     text-align: center;
+     color: #007bff ;    
+     font-size: 25px;
+     padding: 0;
+     margin: 25px 0 0px;
+     font-weight: 600;
+
+ }
+ /* =========== Đường line kẻ ngang ============*/
+.line
+{
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-bottom: 20px;
+    
+}
+.line > .line-or{
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #999;    
+}
+
+    
+
+
+/*========== phần thân register =============*/
+
+.register-field{
+    display: flex;
+    align-items: center;   
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+    
+}
+.register-icon{    
+    color: rgba(0, 0, 0, 0.705);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.register-input{
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+}
+.register-submit{
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #25b37a;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 17px;
+    outline: none;
+
+}
+.register-input-pass{
+    margin-bottom: 0px;
+}
+.register-submit:hover{
+    background-color:#229b6a ;
+}
+.home_back{
+    text-decoration: none;
+    display: inline-block;
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;    
+    margin: 10px 15px 10px 0px;
+    margin-left: 10px;
+}
+.page_login{
+    text-decoration: none;
+    display: inline-block;
+    text-align: right; 
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 85px;
+}
+
+/**********************************/
+/********** Contact CSS ***********/
+/**********************************/
+.contact {
+    position: relative;
+    padding-top: 30px;
+}
+
+.contact .contact-info,
+.contact .contact-form,
+.contact .contact-map {
+    height: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-bottom: 30px solid #f3f6ff;
+}
+
+.contact .contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact .contact-info h3 i {
+    width: 20px;
+    color: #FFD700;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #FFD700;
+}
+
+.contact .social a:hover {
+    background: #FFD700;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+    
+}
+
+.contact-form > form > .row{
+    margin-bottom: 10px;  
+}
+.form-control{
+    font-size: 15px;
+    font-family: "Abeezee",sans-serif;
+    outline: none;
+}
+.btn{
+    border: 2px solid #e6c300;
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    color: #e6c300;
+    font-weight: 600;
+    outline: none;
+}
+.btn:hover,
+.btn:active{
+    background-color: #FFD700;
+    color: white;
+}
+.contact .contact-map iframe {
+    width: 100%;
+    height: 450px;
+}
+/**********************************/
+/**********************************/
+/**********************************/
+
+.searchDauSach {
+    position: relative;
+    left: 550px;
+    top: -50px;
+    margin: 0 a;
+}
+
+.searchDauSach > input {
+        width: 800px;
+        height: 30px;
+        border: none;
+        padding: 0 13px;
+        color: #000000;
+        font-weight: 600;
+        /* border:1px solid #000000;  */
+        border-radius: 4px;
+        font-size: 15px;
+        outline: none;
+}
+
+.user_index{
+    min-height:100vh;
+}
+/*------ css index user -----*/
+.card-pro {
+    width: 200px;
+    height: 230px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205);
+    margin-bottom:50px;
+}
+
+.card-pro > a > img {
+    height: 200px;
+    width: 170px;
+    margin: 15px;
+}
+
+.card-pro > h4 {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Abeezee",sans-serif;
+    padding:5px;
+}
+
+/**********************************/
+/********* CHI TIẾT SÁCH CSS**********/
+/**********************************/
+.product-detail {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    min-height:100vh;
+}
+
+.product-detail .product-detail-top,
+.product-detail .product-detail-bottom {
+    margin-bottom: 30px;
+}
+
+.product-detail .product-detail-top {
+    padding: 0;
+    background: #ffffff;
+    /* box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205) ; */
+   
+}
+
+.product-detail .product-slider-single img {
+    width: 100%;
+}
+
+.product-detail .product-slider-single-nav {
+    margin: 15px 30px 30px 30px;
+    border: 3px double #FF6F61;
+}
+
+.product-detail .product-slider-single-nav .slider-nav-img {
+    border-right: 1px solid #FF6F61;
+    overflow: hidden;
+}
+
+.product-detail .product-slider-single-nav img {
+    width: 100%;
+    transition: all .3s;
+}
+
+.product-detail .product-slider-single-nav img:hover {
+    transform: scale(1.2);
+}
+
+.product-detail .product-content,
+.product-detail .product-content .title,
+.product-detail .product-content .ratting,
+.product-detail .product-content .price,
+.product-detail .product-content .details,
+.product-detail .product-content .quantity,
+.product-detail .product-content .action {
+    position: relative;
+    width: 100%;
+}
+
+.product-detail .product-content {
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    .product-detail .product-content {
+        padding-left: 0;
+    }
+}
+
+.product-detail .product-content .title h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.product-detail .product-content .ratting {
+    margin-bottom: 10px;    
+}
+
+.product-detail .product-content .ratting i {
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.product-detail .product-content .price,
+.product-detail .product-content .quantity,
+.product-detail .product-content .p-size,
+.product-detail .product-content .p-color {
+    margin-bottom: 15px;
+}
+
+.product-detail .product-content .price h4,
+.product-detail .product-content .quantity h4,
+.product-detail .product-content .p-size h4,
+.product-detail .product-content .p-color h4 {
+    display: inline-block;
+    /* width: 80px; */
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 5px;
+
+}
+/************** table ****************/
+.list_DauSach_table{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    border-radius: 1.5px;
+    margin-top: 25px;
+}
+.table_DauSach{
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+.table_DauSach > thead{
+    background-color: #394551;    
+    color: white;
+    font-weight: 400;
+ 
+}
+
+.table_DauSach > thead > tr >td
+{
+    font-size: 13px;
+    font-weight: bold;
+} 
+.table_DauSach td{
+    padding: 10px;
+}
+
+tbody > tr{
+    border-top: 0.5px solid rgba(105, 105, 105, 0.329);
+}
+tbody >tr >td{
+    font-size: 12.5px;
+}
+
+
+.table_DauSach_btn > a{
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    outline: none;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;   
+    color: black;  
+
+}
+
+.table_DauSach_btn > a:hover,
+.table_DauSach_btn > a:active{
+    color: white;
+    background-color:#394551 ;
+  
+    
+}
+tbody > tr:hover{
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+/* .chi-tiet{
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205) ;
+} */
+
+.sidebar-widget {
+    padding: 30px;
+    background: #ffffff;
+}
+
+.sidebar-widget:not(:first-child) {
+    padding-top: 0;
+}
+
+.sidebar-widget .title {
+    position: relative;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.sidebar-widget.category {
+    margin: 0;
+}
+
+.sidebar-widget.category .navbar {
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff !important;
+}
+
+.sidebar-widget.category .navbar-nav {
+    width: 100%;
+}
+.product-content h5{
+    font-size:18px;
+}
+/**********************************/
+/************ Cart CSS ************/
+/**********************************/
+.cart-page {
+    position: relative;
+    margin-top: 30px;
+    min-height: 100vh;
+}
+
+.cart-page .cart-page-inner {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+.cart-page .table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cart-page .table .thead-dark th {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: #353535;
+    text-align: center;
+    background: transparent;
+    border-color: #dddddd;
+    border-bottom: none;
+    vertical-align: middle;
+}
+
+.cart-page .table td {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.cart-page .table .img {
+    display: flex;
+    align-items: center;
+}
+
+.cart-page .table .img img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-right: 15px;
+}
+
+.cart-page .table .img p {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+}
+
+.cart-page .table .qty {
+    display: inline-block;
+    width: 100px;
+    font-size: 0;
+}
+
+.cart-page .table button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    background: #FF6F61;
+    border: none;
+    border-radius: 4px;
+    
+}
+
+.cart-page .table button.btn-minus {
+    border-radius: 4px 0 0 4px;
+}
+
+.cart-page .table button.btn-plus {
+    border-radius: 0 4px 4px 0;
+}
+
+.cart-page .table button.btn-cart {
+    width: auto;
+}
+
+.cart-page .table input {
+    width: 40px;
+    height: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    background: #000000;
+    border: none;
+}
+
+.cart-page .coupon {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 0;
+}
+
+.cart-page .coupon input {
+    width: calc(100% - 135px);
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #999999;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-right: 15px;
+    transition: all .3s;
+}
+
+.cart-page .coupon input:focus {
+    border-color: #FF6F61;
+}
+
+.cart-page .coupon button {
+    width: 120px;
+    height: 40px;
+    padding: 2px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #FF6F61;
+    background: #ffffff;
+    border: 1px solid #FF6F61;
+    border-radius: 4px;
+}
+
+.cart-page .coupon button:hover {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.cart-page .cart-summary {
+    position: relative;
+    width: 100%;
+}
+
+.cart-page .cart-summary .cart-content {
+    padding: 30px;
+    background: #f3f6ff;
+    font-size:18px;
+}
+
+.cart-page .cart-summary .cart-content h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cart-page .cart-summary .cart-content p span,
+.cart-page .cart-summary .cart-content h2 span {
+
+    float: right;
+}
+
+.cart-page .cart-summary .cart-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 12px;
+    border-top: 1px solid #dddddd;
+    margin: 0;
+}
+
+.cart-page .cart-summary .cart-btn button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: calc(50% - 15px);
+    height: 50px;
+    padding: 2px 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #FF6F61;
+    border: none;
+    border-radius: 4px;
+    
+}
+
+.cart-page .cart-summary .cart-btn button:hover {
+    color: #FF6F61;
+    background: #000000;
+}
+
+.cart-page .cart-summary .cart-btn button:first-child {  
+    color: #272424;
+    background: #ffffff;
+    border: 1px solid #272424;
+    font-size:15px;
+}
+
+.cart-page .cart-summary .cart-btn button:first-child:hover {
+    color: #ffffff;
+    background: #272424;
+}
+
+.XoaCart {
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    outline: none;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+}
+/***************************************/
+/************** change Pass CSS **********/
+/***************************************/
+.changePass_father {
+    min-height: 100vh;
+}
+
+.changePass_begin {
+    height: 100vh;
+    background-color: rgba(255,255,255,.1);
+}
+
+.changePass {
+    width: 400px;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px 40px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.205);
+}
+
+.header-changePass {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+    .header-changePass > h5 {
+        text-align: center;
+        color: #007bff;
+        font-size: 25px;
+        padding: 0;
+        margin: 25px 0 0px;
+        font-weight: 600;
+    }
+
+.changePass-field {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(153, 153, 153, 0.432);
+}
+
+.changePass-input {
+    border: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Abeezee",sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+.changePass-submit {
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    background-color: #25b37a;
+    cursor: pointer;
+    font-family: "Abeezee",sans-serif;
+    font-size: 17px;
+    outline: none;
+}
+
+.changePass-input-pass {
+    margin-bottom: 0px;
+}
+
+.changePass-submit:hover {
+    background-color: #229b6a;
+}
+
+.home_back {
+    text-decoration: none;
+    display: inline-block;
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 10px 15px 10px 0px;
+    margin-left: 10px;
+}
+
+.page_login {
+    text-decoration: none;
+    display: inline-block;
+    text-align: right;
+    color: #229b6a;
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 85px;
+}
+
+.mess-error-changePass {
+    color: red;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/*------------- Giỏ hàng trống----------------*/
+.cartNull{
+    min-height: 80vh;
+}
+.cartNull > img{
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+/**********************************/
+/************ Chi tiết thẻ TV *****/
+/**********************************/
+
+.CTT_ThongTin{    
+    margin-top: 50px;
+    padding: 0px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+}
+.CTT_ThongTin > .row > .CTT_img{
+    margin: 0px;
+    padding: 0px;
+}
+.CTT_img{
+    padding: 0px;
+}
+.CTT_img > img{    
+    width: 300px;
+    height: 400px;
+}
+.CTT_mssv, .CTT_HoTen,.CTT_TinhTrang,.CTT_NgayLam,.CTT_NgayHetHan{
+    margin-top: 15px;
+}
+
+.CTT_mssv{
+    margin-top: 100px;
+}
+.CTT_mssv h4, .CTT_mssv h5, .CTT_HoTen h4, .CTT_HoTen h5, .CTT_TinhTrang h4, .CTT_TinhTrang h5,
+.CTT_NgayLam h4, .CTT_NgayLam h5, .CTT_NgayHetHan h4, .CTT_NgayHetHan h5
+{
+    display: inline;
+    padding-left: 15px;    
+    font-family: "Abeezee",sans-serif;
+    font-size:20px;
+}
+.CTT_SachMuon{
+    
+    margin-top: 50px;   
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+}     
+
+.CTT_header{
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Abeezee",sans-serif;
+    
+}
+.CTT_header > h3{
+    font-size:23px;
+    font-family: "Abeezee",sans-serif;
+}
+.CTT_soSachMuon{
+    margin-top: 50px;
+}
+.CTT_body{
+    min-height:80vh;
+}
+
+/*-------- Phân trang -------*/
+.PhanTrang h4 {
+    font-family: "Abeezee",sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.PhanTrang_menu{
+    width:100px;
+    margin: 0 auto;
+}
+.PhanTrang_menu ul li{
+    font-size:25px;
+    padding:10px;
+    color: #394450;
+  
+}
+pagination-container {
+    background-color: #394450;
+}
+
+/**********************************/
+/**********************************/
+/**********************************/

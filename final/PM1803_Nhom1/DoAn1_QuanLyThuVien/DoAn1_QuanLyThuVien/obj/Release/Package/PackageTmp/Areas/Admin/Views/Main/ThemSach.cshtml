@@ -1,0 +1,71 @@
+﻿@model DoAn1_QuanLyThuVien.Models.Sach
+
+@{
+    ViewBag.Title = "Thêm sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<body>
+
+    <!-- ***************************** -->
+    <!-- Render body -->
+    <!-- ChangePass start -->
+    <div class="Header_Dau_Sach">
+        <div class="row align-items-center ">
+            <div class="col-md-4 ">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="Them-Dau-sach-header-content"> Thêm sách</h3>
+            </div>
+            <div class="col-md-4">
+                <a class="DauSach-btn-add" href="#">Quay lại</a>
+            </div>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="login_register">
+            <div class="changePass">
+                <form class="changePass" >
+                    <div class="NhapSach-TenSach">
+                        <h4>
+                            Tên sách :
+                            @*@Html.LabelFor(model => model.DauSach.TenSach)*@
+                            <h4 class="NhapSach-TenSach-conten">@ViewBag.Ten_dauSach</h4>
+                        </h4>
+                    </div>
+                    <div class="NhapSach-MaSach"><h4>Mã đầu sách : <h4 id="id" class="NhapSach-TenSach-conten">@ViewBag.Id_dauSach</h4></h4></div>
+                    <div class="NhapSach-TinhTrang">
+                        <h4>Tình trạng: Còn sách</h4>
+                       
+                    </div>
+                    <div class="changePass-field NhapSach-SoKiemSoat ">
+                        @*@Html.TextBoxFor(model => model.SoKiemSoat, new { @class = "changePass-input", @id = "sks" })*@
+                        <input  name="sks" type="text" class="changePass-input  " placeholder="Nhập số lượng sách muốn thêm" required pattern="[0-9]{1,4}" title="Vui lòng nhập số">
+                    </div>
+                    <textarea name="GhiChu" id="aaa" class="NhapSach-GhiChu" placeholder=" Ghi chú..." cols="33" rows="5"></textarea>
+
+                    <button t type="submit" class="changePass-submit" id="btn">Thêm sách</button>
+
+                    <div class="mess-error-changePass">@ViewBag.ThemSach_message_error</div> <!-- bỏ viewbag vào đây -->
+                    @*<script>
+                        function XacNhan() {
+                            if (confirm("Xác nhận thêm sách") == true)
+                            {
+                                alert('Thêm sách thành công');
+                            } else
+                            {
+                                break
+                            }
+                        }
+                    </script>*@
+                </form>
+                
+            </div>
+        </div>
+    }
+</body>
+</html>
+

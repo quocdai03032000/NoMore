@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+
+
+
+<body>
+    @using (Html.BeginForm("Login", "MainUser"))
+    {
+        <div class="login_begin">
+            <h5 style="text-align:center;color:red">@ViewBag.MessLogin</h5>
+            <div class="login">
+                <div class="header-login">
+                    <img src="~/Assets/img/logoHuflit.png" alt="logo trường huflit">
+                    <H5>Thư viện trường học</H5>
+                </div>
+                <div class="line">
+                    <div class="line-or"></div>
+                </div>
+
+                <div class="login-field">
+                    <i class="login-icon fas fa-user"></i>
+                    <input type="text" class="login-input" placeholder="Nhập tên tài khoản" required name="tk">
+                </div>
+                <div class="login-field login-input-pass">
+                    <i class="login-icon fas fa-lock"></i>
+                    <input type="password" class="login-input " placeholder="Nhập mật khẩu" required name="pass">
+                </div>
+                <a href="@Url.Action("Index","MainUser")" class="home_back"><i class="fas fa-angle-left"></i> Quay về trang chủ?</a>
+                <a href="@Url.Action("Register","MainUser")" class="page_register"> Đăng ký</a>
+                <button type="submit" class="login-submit">Login</button>
+            </div>
+            <form action="javascrip:void(0);" class="login"></form>
+        </div>
+    }
+    
+</body>
+
+
+

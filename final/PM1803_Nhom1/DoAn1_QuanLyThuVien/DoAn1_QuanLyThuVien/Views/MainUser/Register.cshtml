@@ -1,0 +1,72 @@
+﻿@model DoAn1_QuanLyThuVien.Models.DangKyTheTV
+
+@{
+    ViewBag.Title = "Đăng ký thẻ thư viện";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ******* link ****** -->
+    <!-- ******************* -->
+</head>
+<body style="height=100vh">
+
+    <!-- Register start -->
+    @using (Html.BeginForm("Register", "MainUser"))
+    {
+        @Html.AntiForgeryToken();
+        <h4 style="text-align:center;color:red"> @ViewBag.Error</h4>
+        <div class="login_register">
+            <div class="register">
+                <div class="header-login">
+                    <H5>Đăng ký thẻ thư viện</H5>
+                </div>
+                <div class="line">
+                    <div class="line-or"></div>
+                </div>
+
+                <div class="register-field">
+                    <i class="register-icon fas fa-user"></i>
+                    @*<input type="text" class="register-input" placeholder="Nhập họ và tên" required name="_hoten">*@
+                    @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "register-input", @placeholder = "Nhập họ và tên" ,@required="" } })                 
+                </div>
+                <div class="register-field">
+                    <i class="fas fa-barcode"></i>
+                    @*<input type="text" class="register-input" placeholder="Nhập MSSV" required name="_mssv">*@
+                    @Html.EditorFor(model => model.MaThe, new { htmlAttributes= new { @placeholder = "Nhập MSSV", @class = "register-input", @required = "" } })                    
+                </div>
+                <div class="register-field">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" class="register-input" placeholder="Nhập email" required name="email">
+
+
+                </div>
+                <div class="register-field ">
+                    <i class="register-icon fas fa-lock"></i>
+                    @*<input type="password" class="register-input " placeholder="Nhập mật khẩu" required name="pass">*@
+                    @Html.PasswordFor(model => model.Password, new { @placeholder = "Nhập mật khẩu", @class = "register-input", @required = "", @pattern = "[A-Z,a-z,0-9]{7,35}", @title="Mật khẩu phải có tối thiểu 7 ký tự" })
+                    
+                </div>
+                <div class="register-field register-input-pass">
+                    <i class="fas fa-check-double"></i>
+                    <input type="password" class="register-input " placeholder="Nhập lại mật khẩu" required name="ConfirmPass">
+                    @*@Html.PasswordFor(model => model.ConfirmPass, new { @placeholder = "Nhập lại mật khẩu", @class = "register-input" })*@                    
+                </div>
+                <a href="@Url.Action("Index", "MainUser")" class="home_back"><i class="fas fa-angle-left"></i> Quay về trang chủ?</a>
+                <a href="@Url.Action("Login","MainUser")" class="page_login"> Đăng nhập?</a>
+                <button type="submit" class="register-submit">Đăng ký</button>
+            </div>
+        </div>
+
+   
+    }
+    
+    <!-- register end -->
+    <!-- ***************************** -->
+
+</body>
+</html>
+
+

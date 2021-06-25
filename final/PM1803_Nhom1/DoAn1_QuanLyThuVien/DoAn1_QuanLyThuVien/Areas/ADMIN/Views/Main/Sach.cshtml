@@ -1,0 +1,80 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.Sach>
+
+@{
+    ViewBag.Title = "Sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    @using (Html.BeginForm("Sach", "Main"))
+    {
+        <div class="Header_Dau_Sach">
+            <div class="row align-items-center ">
+                <div class="col-md-4 ">
+                    <h3 class="Dau-sach-header-content"> Danh sách sách thư viện</h3>
+                </div>
+                <div class="col-md-4 DauSach-btn-search">
+                    <input type="search" placeholder="Search...." name="_name">
+                </div>
+                <div class="col-md-4">
+                    <a class="DauSach-btn-add" href="#">Thêm sách</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="list_DauSach_table">
+
+            <table class="table_DauSach">
+                <thead>
+                    <tr>
+                        <td>Tên Sách</td>
+                        <td>Số kiểm soát</td>
+                        <td>Trạng thái</td>
+                        <td>Ghi chú</td>
+                        <td class="table_DauSach_ChucNang"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(a=>item.DauSach.TenSach)</td>
+                            <td>@Html.DisplayFor(a => item.SoKiemSoat)</td>
+                            <td class="table_DauSach_status"><i class="fas fa-circle icon_status"></i> @Html.DisplayFor(a => item.TinhTrangSach.TenTinhTrangSach)</td>
+                            <td class="sach-GhiChu">@Html.DisplayFor(a=>item.GhiChu)</td>
+                            <td class="table_DauSach_btn">
+                                <a href="#"><i class="fas fa-wrench"></i></a>
+                                <a href="@Url.Action("XoaSach","Main",new { id=item.id})"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+
+        if (Session["XoaSachMess"] == "yes")
+        {
+            <script type="text/javascript">
+                  alert('Không thể xoá');
+            </script>
+            Session["XoaSachMess"] = null;
+        }
+    }
+   
+</body>
+</html>
+

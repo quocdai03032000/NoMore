@@ -1,0 +1,37 @@
+﻿@model DoAn1_QuanLyThuVien.Models.Account_Admin
+
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="changePass">
+    @using (Html.BeginForm("ChangePass", "Main"))
+    {
+        <div class="header-changePass">
+            <H5>Đổi mật khẩu</H5>
+        </div>
+
+        <div class="line">
+            <div class="line-or"></div>
+        </div>
+
+        <div class="changePass-field">     
+            <input type="password" name="_name" class="changePass-input" placeholder="Nhập mật khẩu cũ" required>
+            @*@Html.PasswordFor(model => model.OldPassword, new { @placeholder = "Nhập mật khẩu cũ", @class = "changePass-input", @name="_name" })*@           
+        </div>
+        <div class="changePass-field ">     
+            <input type="password" name="_newPass" class="changePass-input" placeholder="Nhập mật khẩu mới" required>
+            @*@Html.TextBoxFor(model => model.Password, new { @placeholder = "Nhập mật khẩu mới", @class = "changePass-input" })*@              
+        </div>
+        <div class="changePass-field changePass-input-pass">  
+            <input type="password" name="_nhapLaiPass" class="changePass-input" placeholder="Nhập lại mật khẩu" required>
+            @*@Html.PasswordFor(model => model.ConfirmPass, new { @placeholder = "Nhập lại mật khẩu", @class = "changePass-input" })*@ 
+        </div>
+        <a href="#" class="home_back"><i class="fas fa-angle-left"></i> Quay về trang chủ?</a>
+
+        <button type="submit" class="changePass-submit">Đổi mật khẩu</button>
+
+        <div class="mess-error-changePass">@ViewBag.Error_ChangePass <!--Mật khẩu không trùng khớp!--></div> <!-- bỏ viewbag vào đây -->
+    }   
+</div>

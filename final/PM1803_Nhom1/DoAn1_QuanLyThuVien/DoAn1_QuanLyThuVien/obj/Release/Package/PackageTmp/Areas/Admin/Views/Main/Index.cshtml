@@ -1,0 +1,58 @@
+﻿@model DoAn1_QuanLyThuVien.Models.Account_Admin
+
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="~/Assets/Admin/styleLogin.css" rel="stylesheet" />
+    <title>Login</title>
+
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Main", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="login">
+            <div class="header-login">
+                <img src="~/Assets/img/logoHuflit.png" alt="logo trường huflit">
+                <H5>Thư viện trường học</H5>
+            </div>
+            <div class="line">
+                <div class="line-or"></div>
+            </div>
+
+            <div class="login-field">
+                <i class="login-icon fas fa-user"></i>
+                @Html.TextBoxFor(m => m.User, new { @placeholder = "Nhập tên tài khoản", @class = "login-input" })
+                @*<input type="text" class="login-input" placeholder="Nhập tên tài khoản" required>*@
+            </div>
+            <div class="login-field">
+                <i class="login-icon fas fa-lock"></i>
+                @Html.PasswordFor(m => m.Password, new { @placeholder = "Nhập mật khẩu", @class = "login-input" })
+                @*<input type="password" class="login-input" placeholder="Nhập mật khẩu" required>*@
+            </div>
+            @*============= hiển thị lỗi ===========*@
+            <p class="mess-error">@ViewBag.Error</p>
+            <a href="" class="login-forgot-password">Quay về trang chủ?</a>
+            <button type="submit" class="login-submit">Login</button>
+        </div>
+    }
+
+
+</body>
+
+</html>
+
+

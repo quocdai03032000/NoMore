@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DoAn1_QuanLyThuVien.Models.DauSach> 
+
+@{
+    ViewBag.Title = "Đầu sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<body>
+    @using (Html.BeginForm("DauSach", "Main"))
+    {
+       
+        <div class="Header_Dau_Sach">
+            <div class="row align-items-center ">
+                <div class="col-md-4 ">
+                    <h3 class="Dau-sach-header-content"> Danh sách đầu sách</h3>
+                </div>
+                <div class="col-md-4 DauSach-btn-search">
+                    @******Thanh tìm kiếm*******@
+                    <input type="search" name="_name" placeholder="Search....">
+                </div>
+                <div class="col-md-4">
+                    <a class="DauSach-btn-add" href="@Url.Action("ThemDauSach","Main")">Thêm đầu sách</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="list_DauSach_table">
+            <table class="table_DauSach">
+                <thead>
+                    <tr>
+                        <td class="table_DauSach_MaSach">Mã sách</td>
+                        <td>Tên Sách</td>
+                        <td>Tác giả</td>
+                        <td>Thể loại</td>
+                        <td class="table_DauSach_NamXuatBan">Năm xuất bản</td>
+                        <td class="table_DauSach_SoLuong">Số lượng</td>
+                        <td>Nhà xuất bản</td>
+                        @*<td>Trạng thái</td>*@
+                        <td class="table_DauSach_ChucNang"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                        <tr>
+                            <td>@Html.DisplayFor(a => item.MaDauSach)</td>
+                            <td>@Html.DisplayFor(a => item.TenSach)</td>
+                            <td>@Html.DisplayFor(a => item.TacGia)</td>
+                            <td>@Html.DisplayFor(a => item.TheLoai)</td>
+                            <td>@Html.DisplayFor(a => item.NamXuatBan)</td>
+                            <td>@Html.DisplayFor(a=>item.SoLuong)</td>
+                            <td>@Html.DisplayFor(a => item.NhaXuatBan)</td>
+                            <td class="table_DauSach_btn">                                
+                                <a href="@Url.Action("SuaDauSach","Main",new {id=item.MaDauSach })"><i class="fas fa-wrench"><!-- Sửa --></i></a>
+                                <a href="@Url.Action("XoaDauSach","Main",new { id=item.MaDauSach})"><i class="fas fa-trash-alt"><!-- Xoá --></i></a>
+                                <a href="@Url.Action("ThemSach","Main",new { id=item.MaDauSach})">Thêm sách</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    }
+    
+</body>
+</html>
+

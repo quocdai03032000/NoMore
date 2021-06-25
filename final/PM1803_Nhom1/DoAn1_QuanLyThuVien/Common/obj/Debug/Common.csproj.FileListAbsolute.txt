@@ -1,0 +1,10 @@
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\bin\Debug\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\bin\Debug\Common.pdb
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.pdb
+C:\Users\Tran Quoc Dai\Desktop\Study\DoAn1\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Tran Quoc Dai\Desktop\chuyển đổi app\DoAn1_QuanLyThuVien\Common\bin\Debug\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\chuyển đổi app\DoAn1_QuanLyThuVien\Common\bin\Debug\Common.pdb
+C:\Users\Tran Quoc Dai\Desktop\chuyển đổi app\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Tran Quoc Dai\Desktop\chuyển đổi app\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.dll
+C:\Users\Tran Quoc Dai\Desktop\chuyển đổi app\DoAn1_QuanLyThuVien\Common\obj\Debug\Common.pdb

@@ -1,0 +1,37 @@
+﻿@model DoAn1_QuanLyThuVien.Models.TheThuVien
+
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Views/Shared/_Layout_User_1.cshtml";
+}
+<div class="changePass_father">
+    <div class="changePass">
+        @using (Html.BeginForm("ChangePass", "MainUser"))
+        {
+            <div class="header-changePass">
+                <H5>Đổi mật khẩu</H5>
+            </div>
+
+            <div class="line">
+                <div class="line-or"></div>
+            </div>
+
+            <div class="changePass-field">
+                <input type="password" name="_name" class="changePass-input" placeholder="Nhập mật khẩu cũ" required>
+            </div>
+            <div class="changePass-field ">
+                <input type="password" name="_newPass" class="changePass-input" placeholder="Nhập mật khẩu mới" required>
+            </div>
+            <div class="changePass-field changePass-input-pass">
+                <input type="password" name="_nhapLaiPass" class="changePass-input" placeholder="Nhập lại mật khẩu" required>
+            </div>
+            <a href="@Url.Action("Index","MainUser")" class="home_back"><i class="fas fa-angle-left"></i> Quay về trang chủ?</a>
+
+            <button type="submit" class="changePass-submit">Đổi mật khẩu</button>
+
+            <div class="mess-error-changePass">@ViewBag.Error_ChangePass <!--Mật khẩu không trùng khớp!--></div> <!-- bỏ viewbag vào đây -->
+        }
+    </div>
+</div>
+
+

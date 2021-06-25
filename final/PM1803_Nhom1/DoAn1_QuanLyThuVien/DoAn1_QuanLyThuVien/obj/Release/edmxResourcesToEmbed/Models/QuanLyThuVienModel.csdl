@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account_Admin">
+    <Key>
+      <PropertyRef Name="MaAccount" />
+    </Key>
+    <Property Name="MaAccount" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BaoCaoMuonSach">
+    <Key>
+      <PropertyRef Name="id_BaoCaoMuonSach" />
+    </Key>
+    <Property Name="id_BaoCaoMuonSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="3" />
+    <Property Name="Mssv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSach" Type="Int32" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BaoCaoTraSach">
+    <Key>
+      <PropertyRef Name="id_BaoCaoTraSach" />
+    </Key>
+    <Property Name="id_BaoCaoTraSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayTra" Type="DateTime" Precision="3" />
+    <Property Name="MSSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSach" Type="Int32" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="3" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DangKyTheTV">
+    <Key>
+      <PropertyRef Name="MaDangKyThe" />
+    </Key>
+    <Property Name="MaDangKyThe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaThe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayLam" Type="DateTime" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DauSach">
+    <Key>
+      <PropertyRef Name="MaDauSach" />
+    </Key>
+    <Property Name="MaDauSach" Type="Int32" Nullable="false" />
+    <Property Name="TenSach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NamXuatBan" Type="Int32" />
+    <Property Name="NhaXuatBan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_DauSach" FromRole="DauSach" ToRole="Sach" />
+  </EntityType>
+  <EntityType Name="DKyMuonSach">
+    <Key>
+      <PropertyRef Name="MaDangKyMuonSach" />
+    </Key>
+    <Property Name="MaDangKyMuonSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaThe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSach" Type="Int32" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_DKyMuonSach_Sach" FromRole="DKyMuonSach" ToRole="Sach" />
+    <NavigationProperty Name="TheThuVien" Relationship="Self.FK_DKyMuonSach_TheThuVien" FromRole="DKyMuonSach" ToRole="TheThuVien" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoKiemSoat" Type="Int32" Nullable="false" />
+    <Property Name="MaDauSach" Type="Int32" />
+    <Property Name="MaTinhTrangSach" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DauSach" Relationship="Self.FK_Sach_DauSach" FromRole="Sach" ToRole="DauSach" />
+    <NavigationProperty Name="DKyMuonSaches" Relationship="Self.FK_DKyMuonSach_Sach" FromRole="Sach" ToRole="DKyMuonSach" />
+    <NavigationProperty Name="Sach_Dang_Muon" Relationship="Self.FK_Sach_Dang_Muon_Sach" FromRole="Sach" ToRole="Sach_Dang_Muon" />
+    <NavigationProperty Name="TinhTrangSach" Relationship="Self.FK_Sach_TinhTrangSach" FromRole="Sach" ToRole="TinhTrangSach" />
+  </EntityType>
+  <EntityType Name="Sach_Dang_Muon">
+    <Key>
+      <PropertyRef Name="MaSachMuon" />
+    </Key>
+    <Property Name="MaSachMuon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaThe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSach" Type="Int32" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_Sach_Dang_Muon_Sach" FromRole="Sach_Dang_Muon" ToRole="Sach" />
+    <NavigationProperty Name="TheThuVien" Relationship="Self.FK_Sach_Dang_Muon_TheThuVien" FromRole="Sach_Dang_Muon" ToRole="TheThuVien" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TheThuVien">
+    <Key>
+      <PropertyRef Name="MaThe" />
+    </Key>
+    <Property Name="MaThe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaTinhTrang" Type="Int32" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayLam" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DKyMuonSaches" Relationship="Self.FK_DKyMuonSach_TheThuVien" FromRole="TheThuVien" ToRole="DKyMuonSach" />
+    <NavigationProperty Name="Sach_Dang_Muon" Relationship="Self.FK_Sach_Dang_Muon_TheThuVien" FromRole="TheThuVien" ToRole="Sach_Dang_Muon" />
+    <NavigationProperty Name="TinhTrang_TheTV" Relationship="Self.FK_TheThuVien_TinhTrang_TheTV" FromRole="TheThuVien" ToRole="TinhTrang_TheTV" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TinhTrang_TheTV">
+    <Key>
+      <PropertyRef Name="MaTinhTrang" />
+    </Key>
+    <Property Name="MaTinhTrang" Type="Int32" Nullable="false" />
+    <Property Name="TenTinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TheThuViens" Relationship="Self.FK_TheThuVien_TinhTrang_TheTV" FromRole="TinhTrang_TheTV" ToRole="TheThuVien" />
+  </EntityType>
+  <EntityType Name="TinhTrangSach">
+    <Key>
+      <PropertyRef Name="MaTinhTrangSach" />
+    </Key>
+    <Property Name="MaTinhTrangSach" Type="Int32" Nullable="false" />
+    <Property Name="TenTinhTrangSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_TinhTrangSach" FromRole="TinhTrangSach" ToRole="Sach" />
+  </EntityType>
+  <Association Name="FK_Sach_DauSach">
+    <End Role="DauSach" Type="Self.DauSach" Multiplicity="0..1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DauSach">
+        <PropertyRef Name="MaDauSach" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaDauSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DKyMuonSach_Sach">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="0..1" />
+    <End Role="DKyMuonSach" Type="Self.DKyMuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DKyMuonSach">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DKyMuonSach_TheThuVien">
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="0..1" />
+    <End Role="DKyMuonSach" Type="Self.DKyMuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheThuVien">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="DKyMuonSach">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_Dang_Muon_Sach">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="0..1" />
+    <End Role="Sach_Dang_Muon" Type="Self.Sach_Dang_Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Sach_Dang_Muon">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_TinhTrangSach">
+    <End Role="TinhTrangSach" Type="Self.TinhTrangSach" Multiplicity="0..1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrangSach">
+        <PropertyRef Name="MaTinhTrangSach" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTinhTrangSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_Dang_Muon_TheThuVien">
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="0..1" />
+    <End Role="Sach_Dang_Muon" Type="Self.Sach_Dang_Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheThuVien">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="Sach_Dang_Muon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheThuVien_TinhTrang_TheTV">
+    <End Role="TinhTrang_TheTV" Type="Self.TinhTrang_TheTV" Multiplicity="0..1" />
+    <End Role="TheThuVien" Type="Self.TheThuVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrang_TheTV">
+        <PropertyRef Name="MaTinhTrang" />
+      </Principal>
+      <Dependent Role="TheThuVien">
+        <PropertyRef Name="MaTinhTrang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyThuVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Account_Admin" EntityType="Self.Account_Admin" />
+    <EntitySet Name="BaoCaoMuonSaches" EntityType="Self.BaoCaoMuonSach" />
+    <EntitySet Name="BaoCaoTraSaches" EntityType="Self.BaoCaoTraSach" />
+    <EntitySet Name="DangKyTheTVs" EntityType="Self.DangKyTheTV" />
+    <EntitySet Name="DauSaches" EntityType="Self.DauSach" />
+    <EntitySet Name="DKyMuonSaches" EntityType="Self.DKyMuonSach" />
+    <EntitySet Name="Saches" EntityType="Self.Sach" />
+    <EntitySet Name="Sach_Dang_Muon" EntityType="Self.Sach_Dang_Muon" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TheThuViens" EntityType="Self.TheThuVien" />
+    <EntitySet Name="TinhTrang_TheTV" EntityType="Self.TinhTrang_TheTV" />
+    <EntitySet Name="TinhTrangSaches" EntityType="Self.TinhTrangSach" />
+    <AssociationSet Name="FK_Sach_DauSach" Association="Self.FK_Sach_DauSach">
+      <End Role="DauSach" EntitySet="DauSaches" />
+      <End Role="Sach" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DKyMuonSach_Sach" Association="Self.FK_DKyMuonSach_Sach">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="DKyMuonSach" EntitySet="DKyMuonSaches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DKyMuonSach_TheThuVien" Association="Self.FK_DKyMuonSach_TheThuVien">
+      <End Role="TheThuVien" EntitySet="TheThuViens" />
+      <End Role="DKyMuonSach" EntitySet="DKyMuonSaches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_Dang_Muon_Sach" Association="Self.FK_Sach_Dang_Muon_Sach">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="Sach_Dang_Muon" EntitySet="Sach_Dang_Muon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_TinhTrangSach" Association="Self.FK_Sach_TinhTrangSach">
+      <End Role="TinhTrangSach" EntitySet="TinhTrangSaches" />
+      <End Role="Sach" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_Dang_Muon_TheThuVien" Association="Self.FK_Sach_Dang_Muon_TheThuVien">
+      <End Role="TheThuVien" EntitySet="TheThuViens" />
+      <End Role="Sach_Dang_Muon" EntitySet="Sach_Dang_Muon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheThuVien_TinhTrang_TheTV" Association="Self.FK_TheThuVien_TinhTrang_TheTV">
+      <End Role="TinhTrang_TheTV" EntitySet="TinhTrang_TheTV" />
+      <End Role="TheThuVien" EntitySet="TheThuViens" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,294 @@
+html{
+    font-size: 62.5%;
+    font-family: "Abeezee",sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: #f0f2f5;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
+
+
+/**********************************/
+/********* Bottom Bar CSS *********/
+/**********************************/
+
+
+.bottom-bar {
+    padding: 10px 0;
+    background: #394551;
+     
+}
+
+.bottom-bar .logo {    
+    text-align: center;
+    overflow: hidden;
+}
+.bottom-bar .logo a{
+    text-decoration: none;
+    color: #FFD700;
+    font-family: "Abeezee",sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 10px;
+
+}
+.bottom-bar .logo a img {
+    max-height: 50px;
+}
+
+.bottom-bar .search {
+    width: 100%;
+}
+
+.bottom-bar .search input[type=text] {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    color: #000000;
+    font-weight: 600;
+    border: 1.5px solid #464a4e;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+.bottom-bar .search button {
+    position: absolute;
+    width: 40px;
+    height: 37px;
+    top: 1px;
+    right: 16px;
+    padding: 0 15px;
+    border: none;
+    background: none;
+    color: #464a4e;
+    border-radius: 0 2px 2px 0;
+    background-color:#FFD700;
+    outline: none;
+}
+
+.bottom-bar .search button:hover {
+    background: #dfbd00;
+    color: black;
+    border-radius: 0 2px 2px 0;
+}
+
+
+
+/*************************************************/
+/*********** CSS phần login + mượn ***************/
+
+.nameAdmin{
+    display: inline-block;
+}
+.nameAdmin > a{
+    color:#FFD700 ;  
+    text-decoration: none;
+    display: block;
+    font-size: 20px;   
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+    
+}
+
+.cart{
+    display: inline-block;
+}
+.cart > a{
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 20px;
+    font-family: "Abeezee",sans-serif;
+    font-weight: 600;
+
+}
+.cart > a:hover{
+    color:  white;
+}
+.nameAdmin > a:hover{
+    color: white;
+}
+
+.submenu_admin{
+    width: 250px;
+    background-color: #394551;
+    min-height: 100px;
+    display: none; 
+    position:absolute;
+    font-size: 20px;   
+    font-weight:500;
+    list-style: none;
+    padding: 15px;
+    
+}
+.submenu_admin li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 50px;
+    display:flex;
+    text-indent: 15px;
+    
+}
+
+
+.nameAdmin:hover .submenu_admin{
+    display: block; 
+    cursor: pointer;
+    z-index: 50;
+    
+}
+.submenu_admin > li > a:hover{
+    
+    color:#FFD700;
+   
+}
+
+.Header_contact{
+    display: inline-block;
+}
+.Header_contact > a{
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 20px;
+    font-family: "Abeezee",sans-serif;
+    padding: 0px 25px 0px 25px;
+    font-weight: 600;
+}
+.Header_contact > a:hover{
+    color:  white;
+}
+
+/**********************************/
+/********** Footer CSS ************/
+/**********************************/
+.footer {
+    position: relative;
+    padding: 30px 0 0 0;
+    background: #000000;
+}
+
+.footer .footer-widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.footer .footer-widget h2 {
+    font-size: 25px;
+    white-space: nowrap;
+    margin-bottom: 20px; 
+    color: rgb(109, 109, 109);
+}
+.footer .footer-widget .flag{
+    opacity: 0;
+}
+
+.footer .footer-widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   
+}
+
+.footer .footer-widget ul li {
+    margin-bottom: 12px; 
+    font-size: 15px;
+    
+}
+
+.footer .footer-widget ul li:last-child {
+    margin-bottom: 0; 
+}
+
+.footer .footer-widget ul li a {
+    color: rgb(100, 100, 100);
+    white-space: nowrap;
+    display: block;
+    line-height: 23px;
+    transition: all .3s;
+}
+
+.footer .footer-widget ul li a::before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.footer .footer-widget ul li a:hover {
+    color: #FFD700;
+}
+
+.footer .footer-widget ul li a:hover::before {
+    content: '\f101';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.footer .contact-info p {
+    color: rgb(100, 100, 100);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer .contact-info p i {
+    margin-right: 5px;
+  
+}
+
+.footer .social {
+    position: relative;
+    width: 100%;
+}
+
+.footer .social a {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #353535;
+    border: 1px solid #353535;
+    border-radius: 4px;
+    transition: all .3s;
+    color:rgb(100, 100, 100);
+}
+
+.footer .social a:hover {
+    color: #FFD700;
+    border-color: #FFD700;
+}
+
+.footer .payment {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+@media (min-width: 992px) {
+    .footer .payment {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+/**********************************/
+/**********************************/
+/**********************************/
+.renderBody {
+    height: 100vh;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
